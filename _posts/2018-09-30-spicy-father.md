@@ -92,6 +92,8 @@ Now it's basically just a matter of putting everything in the pot and heating it
 
 Add the tofu and bring to the boil. It just needs to cook long enough for the tofu to absorb the flavour, 15 minutes is fine. Once it's underway you can start cooking the noodles.
 
+![Soup in pot](/assets/soup.jpg)
+
 Chop up loads of coriander and one spring onion per person.
 
 Once it's all cooked, put each portion of noodles in a bowl, and ladle the broth & tofu over the top. Throw some coriander, spring onions, and optionally peanuts and sesame seeds on top. Grind some black pepper on top too if you feel like it. Put the vinegar on the table so people can add more to their bowl if they want. Yum.
