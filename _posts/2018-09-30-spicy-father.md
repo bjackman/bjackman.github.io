@@ -5,7 +5,9 @@ date:   2018-09-30 14:28:03 +0100
 categories: jekyll update
 ---
 
-Here is the long-awaited recipe for Papi Picante's "Spicy Father" sort-of-Sichuan-style noodle soup. I forgot to take pictures of the actual food, so you'll just have to make it to see how it looks.
+Here is the long-awaited recipe for Papi Picante's "Spicy Father" sort-of-Sichuan-style noodle soup. ~~I forgot to take pictures of the actual food, so you'll just have to make it to see how it looks~~.
+
+![The food](/assets/noodles-cooked.jpg)
 
 ### You will need...
 
@@ -51,9 +53,9 @@ Here is the long-awaited recipe for Papi Picante's "Spicy Father" sort-of-Sichua
 
   ![Chinkiang vinegar](/assets/vinegar.jpg)
 
-- Optional: sesame seeds
-
 - Optional: raw, unsalted, shelled peanuts with the skin on.
+
+- Optional: sesame seeds (although you probably don't want both peanuts _and_ sesame seeds)
 
 
 When you get home, drain and press the tofu then put it in the freezer. You can always skip this step, but I think the ice crystals create cavities that make the tofu absorb more flavour when you cook.
@@ -96,7 +98,7 @@ Add the tofu and bring to the boil. It just needs to cook long enough for the to
 
 Chop up loads of coriander and one spring onion per person.
 
-Once it's all cooked, put each portion of noodles in a bowl, and ladle the broth & tofu over the top. Throw some coriander, spring onions, and optionally peanuts and sesame seeds on top. Grind some black pepper on top too if you feel like it. Put the vinegar on the table so people can add more to their bowl if they want. Yum.
+Once it's all cooked, put each portion of noodles in a bowl, and ladle the broth & tofu over the top. Throw some coriander, spring onions, and optionally peanuts or sesame seeds on top. Grind some black pepper on top too if you feel like it. Put the vinegar on the table so people can add more to their bowl if they want. Yum.
 
 ### Some other ideas
 
