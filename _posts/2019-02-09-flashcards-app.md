@@ -14,8 +14,12 @@ you can note down new vocab you encounter - straight into the memory hopper.
 Also in my case, Vietnamese has loads of diacritical marks which seem easier to
 deal with on a mobile keyboard.
 
-I tried quite a few, and the first free one I found which satisfied all of these
-things was [Anki](https://apps.ankiweb.net/) - [Not to be
+Naturally, a problem as simple as this has been solved badly many times by many
+different people, so I went through quite a few duds before eventually finding a
+free option I was satisfied with. That's why I'm writing this down so others can
+see farther by standing on my beautiful giant
+[shoulders](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants). The
+one I found was [Anki](https://apps.ankiweb.net/) - [Not to be
 confused](https://www.reddit.com/r/Anki/comments/71bhyy/ankiapp_is_not_part_of_the_anki_ecosystem/)
 with the misleadingly-named AnkiApp. The UX isn't _amazingly_ slick, but hey, if
 you don't have the energy to figure it out then you won't have the energy to
