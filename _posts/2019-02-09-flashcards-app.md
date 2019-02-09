@@ -19,7 +19,7 @@ different people, so I went through quite a few duds before eventually finding a
 free option I was satisfied with. That's why I'm writing this down so others can
 see farther by standing on my beautiful giant
 [shoulders](https://en.wikipedia.org/wiki/Standing_on_the_shoulders_of_giants). The
-one I found was [Anki](https://apps.ankiweb.net/) - [Not to be
+one I eventually found was [Anki](https://apps.ankiweb.net/) - [Not to be
 confused](https://www.reddit.com/r/Anki/comments/71bhyy/ankiapp_is_not_part_of_the_anki_ecosystem/)
 with the misleadingly-named AnkiApp. The UX isn't _amazingly_ slick, but hey, if
 you don't have the energy to figure it out then you won't have the energy to
