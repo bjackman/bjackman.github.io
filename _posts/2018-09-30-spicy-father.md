@@ -102,7 +102,7 @@ Once it's all cooked, put each portion of noodles in a bowl, and ladle the broth
 
 ### Some other ideas
 
-I sometimes add ground Sichuan pepper, but it doesn't seem to make much difference. I suspect that, like with black pepper, pre-ground Sichuan pepper is pretty useless. Probably if I bought the whole peppercorns and added them freshly toasted and ground, it would be much better. __Edit__: I got curious and tasted my "ground cinnamon" (straight out of its packaging from the shop)... turns out it was cinnamon! However, I've since tried _actual_ ground Suchian peppercorns from another shop and I still think it's pretty useless.
+I sometimes add ground Sichuan pepper, but it doesn't seem to make much difference. I suspect that, like with black pepper, pre-ground Sichuan pepper is pretty useless. Probably if I bought the whole peppercorns and added them freshly toasted and ground, it would be much better. __Edit__: I got curious and tasted my "ground Sichuan peppercorns" (straight out of its packaging from the shop, which is marked in English)... turns out it was cinnamon! However, I've since tried _actual_ ground Suchian peppercorns from another shop and I still think it's pretty useless.
 
 I also haven't tried adding other spices. I bet star anise would go well. If you wanted to get freaky you could try adding a few cloves. I dunno.
 
