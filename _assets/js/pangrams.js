@@ -86,7 +86,7 @@ let counts = new Map();
 letters.forEach(l => counts.set(l, {"letter": l, "count": hofstadterCounts[l]}));
 
 function createSentence(counts) {
-    let sentence = "This sentence tallies"
+    let sentence = "This pangram tallies"
 
     let i = 0;
     counts.forEach(countElem => {
@@ -105,7 +105,44 @@ function createSentence(counts) {
     return sentence;
 }
 
-let intro = "This sentence tallies "
+function countLetters(sentence) {
+    let counts = new Map();
+    letters.forEach(letter => {
+        counts.set(letter, {"letter": letter, "count": sentence.match(new RegExp(letter, "g")).length})
+    });
+    return counts;
+}
+
+function renderSentence(counts) {
+    let span = document.createElement("span");
+    span.innerText = "This pangram tallies";
+    let spans = [span];
+
+    let sentenceString = createSentence(counts);
+    let actualCounts = countLetters(sentenceString);
+
+    let i = 0;
+    counts.forEach(countElem => {
+        let tallyPhrase = " ";
+        if (i == counts.size - 1)
+            tallyPhrase += "and ";
+        tallyPhrase += numberWords[countElem.count] + " " + countElem.letter;
+        if (countElem.count > 1)
+            tallyPhrase += "'s";
+        if (i != counts.size - 1)
+            tallyPhrase += ",";
+
+        let span = document.createElement("span");
+        if (actualCounts.get(countElem.letter).count != countElem.count)
+            span.style.color = "red"
+        span.innerText = tallyPhrase;
+        spans.push(span);
+
+        i++;
+    });
+
+    return spans;
+}
 
 function update() {
     let td = d3.select("#letter-counts")
@@ -127,9 +164,12 @@ function update() {
 
     td.selectAll(".claimed-count").text(d => d.count);
 
-    sentence = createSentence(counts);
-    console.log(sentence);
-    d3.select("#sentence").text(createSentence(counts));
+    let sentenceNodes = renderSentence(counts);
+    let sentenceP = d3.select("#sentence").node();
+    sentenceP.innerHTML = "";
+    sentenceNodes.forEach(node => {
+        sentenceP.appendChild(node);
+    });
 }
 
 window.onload = update;
