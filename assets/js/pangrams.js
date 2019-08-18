@@ -149,14 +149,14 @@ function update() {
         .selectAll("td")
         .data(Array.from(counts.values()), d => d.letter);
 
-    let tdEnter = td.enter().append("td").text(d => d.letter);;
+    let tdEnter = td.enter().append("td").style("display", "inline-block").text(d => d.letter);;
     tdEnter.append("span").attr("class", "claimed-count").text(d => d.count);
-    tdEnter.append("a").attr("href", "#").text("+").on("click", d => {
+    tdEnter.append("span").style("cursor", "pointer").text("+").on("click", d => {
         if (d.count < 50)
             d.count++;
         update()
     });
-    tdEnter.append("a").attr("href", "#").text("-").on("click", d => {
+    tdEnter.append("span").style("cursor", "pointer").text("-").on("click", d => {
         if (d.count > 0)
             d.count--;
         update()
@@ -165,10 +165,10 @@ function update() {
     td.selectAll(".claimed-count").text(d => d.count);
 
     let sentenceNodes = renderSentence(counts);
-    let sentenceP = d3.select("#sentence").node();
-    sentenceP.innerHTML = "";
+    let sentenceElem = d3.select("#sentence").node();
+    sentenceElem.innerHTML = "";
     sentenceNodes.forEach(node => {
-        sentenceP.appendChild(node);
+        sentenceElem.appendChild(node);
     });
 }
 
