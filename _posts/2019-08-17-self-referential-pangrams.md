@@ -41,47 +41,9 @@ with just my brain and a pencil so I started writing some code. Here's a widget
 you can play with to figure out whether one of these magical sentences is
 accurate (don't read my JavaScript - it will hurt you):
 
-<script>
-</script>
-
-<table>
-    <tbody>
-        <tr>
-            <td>a: 1</td>
-            <td>b: 1</td>
-            <td>c: 1</td>
-            <td>d: 1</td>
-            <td>e: 1</td>
-            <td>f: 1</td>
-            <td>g: 1</td>
-            <td>h: 1</td>
-            <td>i: 1</td>
-        </tr>
-        <tr>
-            <td>j: 1</td>
-            <td>k: 1</td>
-            <td>l: 1</td>
-            <td>m: 1</td>
-            <td>n: 1</td>
-            <td>o: 1</td>
-            <td>p: 1</td>
-            <td>q: 1</td>
-            <td>r: 1</td>
-        </tr>
-        <tr>
-            <td>s: 1</td>
-            <td>t: 1</td>
-            <td>u: 1</td>
-            <td>v: 1</td>
-            <td>w: 1</td>
-            <td>x: 1</td>
-            <td>y: 1</td>
-            <td>z: 1</td>
-        </tr>
-    </tbody>
-</table>
-
-(DO IT)
+<table><tr id="letter-counts"></tr></table>
+<p id="sentence"></p>
+<script src="/assets/js/pangrams.js"></script>
 
 Wait a second - Hofstadter's pangram is wrong! It only contains twenty-one t's!
 See if you can fix it. I can't. This may be funny but it is not satisfying.
