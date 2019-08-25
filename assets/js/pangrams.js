@@ -210,20 +210,30 @@ function updateTable() {
         .selectAll("td")
         .data(Array.from(counts.values()), d => d.letter);
 
-    let tdEnter = td.enter().append("td").style("display", "inline-block").text(d => d.letter);;
+    let sentenceString = createSentence(counts);
+    let actualCounts = countLetters(sentenceString);
+
+    let tdEnter = td.enter().append("td").style("display", "inline-block").text(d => `${d.letter}: `);;
     tdEnter.append("span").attr("class", "claimed-count").text(d => d.count);
     tdEnter.append("span").style("cursor", "pointer").text("+").on("click", d => {
         if (d.count < 50)
             d.count++;
-        update()
+        updateTable()
     });
     tdEnter.append("span").style("cursor", "pointer").text("-").on("click", d => {
-        if (d.count > 0)
+        if (d.count > 1)
             d.count--;
-        update()
+        updateTable()
     });
+    tdEnter.append("span").attr("class", "actual-count")
+        .text(d => `(${actualCounts.get(d.letter).count})`)
+        .style("color", d => actualCounts.get(d.letter).count != d.count ? "red" : "gray");
+
 
     td.selectAll(".claimed-count").text(d => d.count);
+    td.selectAll(".actual-count")
+        .text(d => `(${actualCounts.get(d.letter).count})`)
+        .style("color", d => actualCounts.get(d.letter).count != d.count ? "red" : "gray");
 
     let sentenceNodes = renderSentence(counts);
     let sentenceElem = d3.select("#sentence").node();

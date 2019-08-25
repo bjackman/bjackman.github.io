@@ -33,8 +33,8 @@ sentence's own simple narcissism.
 Here's a widget that renders these sentences with any falsehoods highlighted in
 red:
 
-<table><tr id="letter-counts"></tr></table>
 <blockquote id="sentence"></blockquote>
+<table style="border: none;"><tr id="letter-counts"></tr></table>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="/assets/js/pangrams.js"></script>
 
