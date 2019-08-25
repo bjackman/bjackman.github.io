@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Self-referential Pangrams"
+title:  "Pangrammatic Autograms"
 ---
 
 In *Gödel, Escher, Bach*, Douglas Hofstader explains how self-reference
@@ -18,9 +18,9 @@ pretty captivating:
 > eighteen n's, fifteen o's, two p's, one q, seven r's, twenty-five s's, twenty
 > two t's, four u's, four v's, nine w's, two x's, four y's, and one z.
 
-A self-referential pangram. Coming up with any old self-referential pangram
-isn't hard (although this ersatz pangram's quotient of glyphs wants six), but
-one that accurately describes itself in this detail is tricky. Try inventing
+A self-descriptive sentence ike this is called an *autogram*. Coming up with any
+old self-referential pangram isn't hard (although this ersatz pangram's quotient
+of glyphs wants six), but a pangrammatic autogram is very tricky. Try inventing
 such a sentence from scratch naïvely, and this is how far you get:
 
 > This sentence contains two a's, one b, three c's, one d,
@@ -47,11 +47,10 @@ satisfying.
 
 So, how do we go about generating them? We can start the approach we took above,
 and by a little less naïve by noting that we do not need to append our tallies
-in alphabetical order. Perhaps by selecting the order of the tallies carefully
-we can incrementally build a sentence that is true at every step of the
-way. Indeed some letters do not appear in the words for any numbers so they can
-be tallied "for free" without fear of falsifying any as-yet-unwritten part of
-the sentence:
+in alphabetical order. By selecting the order of the tallies carefully we can
+avoid the "seven a's" issue we encountered earlier. And some letters do not
+appear in the words for any numbers so they can be tallied "for free" without
+fear of falsifying any as-yet-unwritten part of the sentence:
 
 > This pangram tallies one b, one c, five a's, two d's, one j, one k, two m's,
   two p's, one q, and one z
@@ -66,15 +65,76 @@ carefully we can go surprisingly far:
   two p's, one q, one z, one y, two g's, three l's, one u, five w's, thirteen
   o's, three f's, three v's, six h's, and six r's
 
-Here we have tallied twenty letters and all that remain are 'e', 's', 'n', 't',
-'i', and 'x'. But here we are stuck. We can backtrack and try again with a new
-order, but we will always get stuck eventually: suppose we had a sentence
-accurately tallying 25 of its constituent letters. The tally for the final
-letter would certainly contain some of those 25 letters, so adding it would make
-a pre-existing tally false.
+But eventually we will always end up falsifying an earlier part of the sentence:
+suppose we somehow managed to tally twenty five letters by this method. To add
+the final tally, we would need to use letters that have already been tallied, so
+the sentence would become false.
+
+Do you hate computers? If you would like to see yours suffer, you can watch it
+trying to complete this impossible task here:
+
+TODO
+
+In theory it will admit defeat eventually, but if my calculations are correct,
+its stupid metal brain will probably oxidise into dust before that happens.
+
+As another way to think about how hard generating pangrammatic autograms is to
+compare it to a slightly simpler problem: what if we don't care if the
+individual letter counts are correct, just that they add up to the right total?
+In that case, the only thing that matters about the phrase "one a" is that it
+tallies one letter, but contains four. It doesn't matter what those four letters
+are. Generating these pseudo-autograms turns out to be a variant of the
+well-known ["subet sum"
+problem](https://en.wikipedia.org/wiki/Subset_sum_problem). This is already an
+*NP-complete* problem, which is a fancy way of saying it's "pretty tricky", but
+it can be solved quite speedily for the values we're interested in here. Before
+writing this article, I had thought I could just write a program to generate
+these pseudo-autograms, then test loads of them until I found a true autogram
+among them. But the number of pseudo-autograms is vaster than I thought (never
+underestimate the fatorial function!) and autograms are a very slim subset of
+pseudo-atograms. My little laptop would take far too long. The additional degree
+of self-reference introduced by having specifically the "o" in "one a" influence
+the rest of the sentence takes the difficulty of the problem to another level.
+
+After realising just how difficult this task is, I had a look online to see if
+anyone has come up with a solution, and it turns out Chris Patuzzo has found
+rather a good one. He describes it rather well in [this
+podcast](https://whyarecomputers.com/4) and I'll try to describe it in the
+opposite direction from him. One of the best known problems in computer science
+is "boolean satisfiability", or "SAT" for short. Suppose I tell you "either I am
+a mongoose, or I am speaking". This might be true, if I was truly a mongoose, or
+if I was truly speaking aloud. However the claim "I am a mongoose, and mongeese
+cannot speak, and I am speaking" is different. If I was a mongoose making the
+claim aloud then my assertion of the muteness of mongeese would stand on shaky
+ground indeed. If mongeese are truly speechless and you heard me speaking, you
+would surely doubt that I was a mongoose. SAT, then, is the problem of detecting
+these claims that can *never* be true. As a bonus, if the claim *can* be true, a
+SAT-solver can tell you the situations where it would be. When given "Either I
+am a mongoose, or I am speaking", a SAT solver would spit out two valid
+situations:
+
+- You are indeed a mongoose, but you are not speaking
+- You are indeed speaking, but you are not a mongoose
+
+In both cases, my claim would be true. Such simple examples may not make it
+clear, but a SAT-solver is quite a spectacular thing, because it turns logical
+puzzles inside out. Chris Patuzzo figured out a way of feeding the claim "there
+is a pangrammatic autogram" into a SAT-solver, and the SAT-solver spat out
+situations where that claim is true (i.e. pangrammatic sentences). I have of
+course been glossing over the details - SAT-solvers do not really understand
+English[^2], they work on formal logical expressions. The logical expression
+that I'm glossing over when I write "I am a mongoose and I am speaking" is very
+simple. But beneath "there is a pangrammatic autogram" lies a great deal more
+complexity; coming up with that logical expression was the bulk of Patuzzo's
+work.
 
 So we cannot reach our goal by steps from one true[^1] sentence to another; we
 must take a leap of faith into falesehood which is rectified at the grand
 finale.
 
 [^1]: Except that it claims to be a pangram
+
+[^2] Actually, there has been lots of pretty cool research on writing programs
+     that understand some parts of natural language and use it to do logical
+     reasoning like SAT-solving. There was a time when some people thought this
+     might lead to real artificial intelligence!
