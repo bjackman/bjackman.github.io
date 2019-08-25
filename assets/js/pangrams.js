@@ -91,7 +91,7 @@ function createSentence(counts) {
     let i = 0;
     counts.forEach(countElem => {
         sentence += " ";
-        if (i == counts.size - 1)
+        if ((counts.size) > 1 && (i == counts.size - 1))
             sentence += "and ";
         sentence += numberWords[countElem.count] + " " + countElem.letter;
         if (countElem.count > 1)
@@ -108,7 +108,8 @@ function createSentence(counts) {
 function countLetters(sentence) {
     let counts = new Map();
     letters.forEach(letter => {
-        counts.set(letter, {"letter": letter, "count": sentence.match(new RegExp(letter, "g")).length})
+        let match = sentence.match(new RegExp(letter, "g"));
+        counts.set(letter, {"letter": letter, "count": match ? match.length : 0})
     });
     return counts;
 }
@@ -124,7 +125,7 @@ function renderSentence(counts) {
     let i = 0;
     counts.forEach(countElem => {
         let tallyPhrase = " ";
-        if (i == counts.size - 1)
+        if ((counts.size > 1) && (i == counts.size - 1))
             tallyPhrase += "and ";
         tallyPhrase += numberWords[countElem.count] + " " + countElem.letter;
         if (countElem.count > 1)
@@ -144,7 +145,67 @@ function renderSentence(counts) {
     return spans;
 }
 
-function update() {
+function writeTallyPhrase(count, letter) {
+    let tallyPhrase = numberWords[count] + " " + letter;
+    if (count > 1)
+        tallyPhrase += "'s";
+    return tallyPhrase
+}
+
+function* suffer(counts) {
+    let sentence = createSentence(counts);
+    let sentenceCounts = countLetters(sentence);
+    console.log(`New call: ${sentence}`);
+    for (let newLetter of letters) {
+        console.log(`Trying ${newLetter}`);
+        if (counts.has(newLetter)) {
+            console.log("already done");
+            continue;
+        }
+        let newLetterCount = sentenceCounts.get(newLetter).count;
+        let found = false;
+        let newTallyPhrase = null;
+        for (let additionalCount = 0; additionalCount <= 5; additionalCount++) {
+            newTallyPhrase = writeTallyPhrase(newLetterCount + additionalCount, newLetter);
+            if (countLetters(newTallyPhrase).get(newLetter).count == additionalCount) {
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            console.log("no candidates");
+            continue;
+        }
+        newCounts = new Map(counts);
+        newCounts.set(newLetter, {"letter": newLetter, "count": newLetterCount})
+        for (let chr of newTallyPhrase.split(""))
+            if (newCounts.has(chr))
+                newCounts.set(chr, {"letter": chr, "count": newCounts.get(chr).count + 1});
+
+        yield newCounts;
+
+        let newSentence = createSentence(newCounts);
+        let actualNewCounts = countLetters(newSentence);
+        let newSentenceValid = true;
+        for (let [letter, newCount] of newCounts) {
+            if (newCount.count != actualNewCounts.get(letter).count) {
+                newSentenceValid = false;
+                console.log(`invalid ${letter} ${newCount.count} ${actualNewCounts.get(letter).count}`);
+                break;
+            }
+        }
+        if (newSentenceValid) {
+            console.log("Recursing");
+            for (let val of suffer(newCounts)) {
+                yield val;
+            }
+        }
+    }
+    console.log("Returning");
+    return null;
+}
+
+function updateTable() {
     let td = d3.select("#letter-counts")
         .selectAll("td")
         .data(Array.from(counts.values()), d => d.letter);
@@ -172,4 +233,24 @@ function update() {
     });
 }
 
-window.onload = update;
+let sentenceGenerator = suffer(new Map());
+function updateSuffering() {
+    counts = sentenceGenerator.next().value;
+    console.log(counts);
+    let sentenceNodes = renderSentence(counts);
+    let sentenceElem = d3.select("#suffering-sentence").node();
+    sentenceElem.innerHTML = "";
+    sentenceNodes.forEach(node => {
+        sentenceElem.appendChild(node);
+    });
+}
+
+function main() {
+    updateTable();
+    let timer = null;
+    d3.select("#suffering-start").on("click", function() { if (!timer) { timer = d3.interval(updateSuffering, 500) }});
+    d3.select("#suffering-stop").on("click", function() { if (timer) timer.stop(); timer = null; });
+    d3.select("#suffering-step").on("click", updateSuffering);
+}
+
+window.onload = main;

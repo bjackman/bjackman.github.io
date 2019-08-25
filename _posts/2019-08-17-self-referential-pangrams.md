@@ -73,7 +73,9 @@ the sentence would become false.
 Do you hate computers? If you would like to see yours suffer, you can watch it
 trying to complete this impossible task here:
 
-TODO
+<blockquote id="suffering-sentence" style="line-height: 2em; height: 6em"></blockquote>
+<button id="suffering-start">start</button>
+<button id="suffering-stop">stop</button>
 
 In theory it will admit defeat eventually, but if my calculations are correct,
 its stupid metal brain will probably oxidise into dust before that happens.
@@ -100,31 +102,48 @@ After realising just how difficult this task is, I had a look online to see if
 anyone has come up with a solution, and it turns out Chris Patuzzo has found
 rather a good one. He describes it rather well in [this
 podcast](https://whyarecomputers.com/4) and I'll try to describe it in the
-opposite direction from him. One of the best known problems in computer science
+opposite direction from how he does.
+
+One of the best known problems in computer science
 is "boolean satisfiability", or "SAT" for short. Suppose I tell you "either I am
 a mongoose, or I am speaking". This might be true, if I was truly a mongoose, or
-if I was truly speaking aloud. However the claim "I am a mongoose, and mongeese
-cannot speak, and I am speaking" is different. If I was a mongoose making the
-claim aloud then my assertion of the muteness of mongeese would stand on shaky
-ground indeed. If mongeese are truly speechless and you heard me speaking, you
-would surely doubt that I was a mongoose. SAT, then, is the problem of detecting
-these claims that can *never* be true. As a bonus, if the claim *can* be true, a
-SAT-solver can tell you the situations where it would be. When given "Either I
-am a mongoose, or I am speaking", a SAT solver would spit out two valid
-situations:
+if I was truly speaking aloud. But if I tell you "I am a mongoose, and mongeese
+cannot speak, and I am speaking" then you don't need *any evidence* to say that
+I'm lying. If I was truly a mongoose making the claim aloud, then my assertion
+of the muteness of mongeese would stand on shaky ground indeed. If mongeese are
+really speechless and you heard me speaking, you would surely doubt my
+mongoosehood. If I was indeed a mongoose, which was truly a nonverbal creature,
+you would not believe that I was speaking. SAT, then, is the problem of
+detecting these claims that can *never* be true. As a bonus, if the claim *can*
+be true, a SAT-solver can tell you the situations where it would be. When given
+"Either I am a mongoose, or I am speaking", a SAT-solver would spit out two
+valid situations:
 
 - You are indeed a mongoose, but you are not speaking
 - You are indeed speaking, but you are not a mongoose
 
-In both cases, my claim would be true. Such simple examples may not make it
-clear, but a SAT-solver is quite a spectacular thing, because it turns logical
-puzzles inside out. Chris Patuzzo figured out a way of feeding the claim "there
-is a pangrammatic autogram" into a SAT-solver, and the SAT-solver spat out
-situations where that claim is true (i.e. pangrammatic sentences). I have of
-course been glossing over the details - SAT-solvers do not really understand
-English[^2], they work on formal logical expressions. The logical expression
-that I'm glossing over when I write "I am a mongoose and I am speaking" is very
-simple. But beneath "there is a pangrammatic autogram" lies a great deal more
+Such simple examples may not make it clear, but a SAT-solver is quite a
+spectacular thing, because it turns logical puzzles inside out. Chris Patuzzo
+figured out a way of feeding the claim "there is a pangrammatic autogram" into a
+SAT-solver, and the SAT-solver spat out situations where that claim is true
+(i.e. pangrammatic sentences). I have of course been glossing over the details -
+SAT-solvers do not really understand English[^2], you feed them formal logical
+expressions, and they spit out lists of all the combinations of truth and
+falsehood that can make your overall expression true. The logical expression
+that I'm glossing over when I write "I am a mongoose" is very simple, it
+contains a single unit of truth or falsity (i.e. my mongoosehood). But if the
+formal expression that we imagined for the claim "there is a pangrammatic
+autogram" was so simple, then the SAT-solver would simply tell us "there is
+indeed a pangrammatic autogram". Patuzzo's work was to express "there is a
+pangrammatic autogram" in such specific terms that the SAT-solver had no choice
+but to spit out everything we need to know to write out the actual sentence.
+
+Patuzzo clearly thought this was a pretty neat idea (and I agree), because he
+created an entire programming language, called
+[Sentient](https://sentient-lang.org), which helps you express your problems in
+ways that bully SAT-solvers into solving them for you, as he did for the problem
+of pangrammatic autograms..
+
 complexity; coming up with that logical expression was the bulk of Patuzzo's
 work.
 
