@@ -84,6 +84,8 @@ Now it's basically just a matter of putting everything in the pot and heating it
 
 - 1.5tbsp. doubanjiang
 
+- 2tbsp. shaoxing wine
+
 - 2tbsp. soy sauce
 
 - 4tbps. chinkiang vinegar
