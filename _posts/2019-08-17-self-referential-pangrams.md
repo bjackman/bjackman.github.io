@@ -3,10 +3,10 @@ layout: post
 title:  "Pangrammatic Autograms"
 ---
 
-In *Gödel, Escher, Bach*, Douglas Hofstader explains how self-reference
+In *Gödel, Escher, Bach*, Douglas Hofstadter explains how self-reference
 underpins some staggering philosophical truths. Relatedly, it's *satisfying* and
 *funny*. Pangrams - sentence containing every letter - are also satisfying, and
-though perhaps I never actually LOL'd at "the quick brown fox jumps ovrer the
+though perhaps I never actually LOL'd at "the quick brown fox jumps over the
 lazy dog", I think they're sort of funny (maybe they are a weak form of Tom 7's
 ["improper hierarchy"](https://www.youtube.com/watch?v=ar9WRwCiSr0)).
 
@@ -18,7 +18,7 @@ pretty captivating:
 > eighteen n's, fifteen o's, two p's, one q, seven r's, twenty-five s's, twenty
 > two t's, four u's, four v's, nine w's, two x's, four y's, and one z.
 
-A self-descriptive sentence ike this is called an *autogram*. Coming up with any
+A self-descriptive sentence like this is called an *autogram*. Coming up with any
 old self-referential pangram isn't hard (although this ersatz pangram's quotient
 of glyphs wants six), but a pangrammatic autogram is very tricky. Try inventing
 such a sentence from scratch naïvely, and this is how far you get:
@@ -86,15 +86,15 @@ individual letter counts are correct, just that they add up to the right total?
 In that case, the only thing that matters about the phrase "one a" is that it
 tallies one letter, but contains four. It doesn't matter what those four letters
 are. Generating these pseudo-autograms turns out to be a variant of the
-well-known ["subet sum"
+well-known ["subset sum"
 problem](https://en.wikipedia.org/wiki/Subset_sum_problem). This is already an
 *NP-complete* problem, which is a fancy way of saying it's "pretty tricky", but
 it can be solved quite speedily for the values we're interested in here. Before
 writing this article, I had thought I could just write a program to generate
 these pseudo-autograms, then test loads of them until I found a true autogram
 among them. But the number of pseudo-autograms is vaster than I thought (never
-underestimate the fatorial function!) and autograms are a very slim subset of
-pseudo-atograms. My little laptop would take far too long. The additional degree
+underestimate the factorial function!) and autograms are a very slim subset of
+pseudo-autograms. My little laptop would take far too long. The additional degree
 of self-reference introduced by having specifically the "o" in "one a" influence
 the rest of the sentence takes the difficulty of the problem to another level.
 
