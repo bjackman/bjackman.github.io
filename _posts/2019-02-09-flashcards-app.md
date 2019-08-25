@@ -28,7 +28,7 @@ kind of simple application.
 
 The training goes like this: you see one side of a card, try to remember what's
 on other side, flip it over and see if you got it right, then press one of:
-"again" (I didn't know ir, show me again soon), "good" (I got it, but show me
+"again" (I didn't know it, show me again soon), "good" (I got it, but show me
 again soonish) or "easy" (I definitely know this one). This is exactly how I
 used to learn vocab with physical flashcards; a pile for the words I didn't know
 at all, a pile for the cards I knew but needed cementing, and a pile for the
