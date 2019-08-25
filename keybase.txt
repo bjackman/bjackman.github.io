@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/bjackman
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://yawn.io
+  * I am bjackman (https://keybase.io/bjackman) on keybase.
+  * I have a public key with fingerprint 7155 7AF5 C862 3700 3DDD  FD91 9F44 D1EE 6B2C BFB8
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "010167bb542d9247b74e1eb5375adb5c1ef6fae2d905308869832b7dbeadeaaf1a070a",
+      "fingerprint": "71557af5c86237003dddfd919f44d1ee6b2cbfb8",
+      "host": "keybase.io",
+      "key_id": "9f44d1ee6b2cbfb8",
+      "kid": "010167bb542d9247b74e1eb5375adb5c1ef6fae2d905308869832b7dbeadeaaf1a070a",
+      "uid": "f19c1c986f047d1d992e1c50f92e8300",
+      "username": "bjackman"
+    },
+    "service": {
+      "hostname": "yawn.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1566719837,
+  "expire_in": 157680000,
+  "prev": "b908dc968e86d63214b630765a7549b8cf6d23de52b3cb5c09db472a52fabad7",
+  "seqno": 15,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMIjAnicrVJbSBVBGD6nNEySrj4YRbHWg6Q2s5eZXeniS4bdqMS08Hic2Zm19bLn
+eM568iBmiVFBUGQZRERQKUQXI4qKSrtZUUE+VEQQIZihGVYkBGrNWr312Lz8zD/f
+9833/fwPUib7kv3Lp7d9LXTXbvU/vdtS6wvQlYF6iYZYXMqplyr5ROFVjEfdYKXN
+pBwJQAARplRTZWbIKqZY5ZBTTcEaYVQzIbeQRbh4BJoCdB0ZuiJTzCgnjBNiQQIw
+IFKmZNlOOY+EI7bjClkMNQ0TSzN1JCsYAIUxZjEDGpaqMsg5orJJLaoL4vZQ1GMI
+c5REebYdEj1xCU7Y+wf+P/uunZCzoGFC09CRBVTMIDMMmUNTA5aougKAB4zyiEOq
+uUDTCmJWVhNHasiURDdmm9wbrJfkDyJOdji/o4QjITdkhqpEc7vrhqM5HsmNhz3U
+Dk6Df/hBajtMjFAwYjwStUOOlAMF0nRtTxBqCGEoMuBMideF7QgP2h5Cw0gH4nj/
+8JhnzQA6Mw2kcx0xpMhQpUgBGGkEa6pBddNCTFYY12SqmGJOwGBUxTLRZItQwrDk
+JapxQp628EnKhWbULneIWxvhUsO9rpIEnz/ZNyVxkrdbvuSpM/5uXEZBkq8HzNpW
+11+AKuM9B46/e5tvdaYfutiU3jU41rhk/4rx4efrGs8uXlW2frC3N9EkG7+/zCqd
+uXkoY9dwf0Xy5bvRQNXV9kUH86cNbJra1xqon512JbtEWvL2eEc8V11z/mdxRkPS
+53Lfi9LOaz/mQiPtzM3rQyf3lbblTVk9P0F6Zl9o6UvonhObXnUu65vzKl298aY3
+ddfMmv5bD/2pgTxrpHl2qbyl7NjSwqZPYPKdhZeKBqrbmz8WxI72rGiScjsS8/JP
+HVEij9s3zWrMPjjvfsn4F/ij5nZK60U0yjI+lCWNFvv2jhW13O8+vOe0/mT38yH/
+60dnNiwY0erep13Z+fRE67Jfx8w7qQ==
+=HWxe
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/bjackman
+
+==================================================================
