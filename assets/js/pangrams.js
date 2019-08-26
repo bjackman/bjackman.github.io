@@ -1,5 +1,9 @@
+// WHAT, YOU THOUGHT YOU'D FIND CLEAN CODE HERE?
+//         YOU THOUGHT YOU'D FIND COMMMENTS??
+//           YOU THOUGHT PUNK WAS DEAD???
+
 let numberWords = [
-    "", // Zero
+    "",
     "one",
     "two",
     "three",
@@ -155,11 +159,8 @@ function writeTallyPhrase(count, letter) {
 function* suffer(counts) {
     let sentence = createSentence(counts);
     let sentenceCounts = countLetters(sentence);
-    console.log(`New call: ${sentence}`);
     for (let newLetter of letters) {
-        console.log(`Trying ${newLetter}`);
         if (counts.has(newLetter)) {
-            console.log("already done");
             continue;
         }
         let newLetterCount = sentenceCounts.get(newLetter).count;
@@ -167,41 +168,39 @@ function* suffer(counts) {
         let newTallyPhrase = null;
         for (let additionalCount = 0; additionalCount <= 5; additionalCount++) {
             newTallyPhrase = writeTallyPhrase(newLetterCount + additionalCount, newLetter);
+            if (counts.size == 1)
+                newTallyPhrase = "and " + newTallyPhrase;
             if (countLetters(newTallyPhrase).get(newLetter).count == additionalCount) {
                 found = true;
                 break;
             }
         }
         if (!found) {
-            console.log("no candidates");
             continue;
         }
-        newCounts = new Map(counts);
+        let newCounts = new Map(counts);
         newCounts.set(newLetter, {"letter": newLetter, "count": newLetterCount})
         for (let chr of newTallyPhrase.split(""))
             if (newCounts.has(chr))
                 newCounts.set(chr, {"letter": chr, "count": newCounts.get(chr).count + 1});
 
+        let newSentence = createSentence(newCounts);
         yield newCounts;
 
-        let newSentence = createSentence(newCounts);
         let actualNewCounts = countLetters(newSentence);
         let newSentenceValid = true;
         for (let [letter, newCount] of newCounts) {
             if (newCount.count != actualNewCounts.get(letter).count) {
                 newSentenceValid = false;
-                console.log(`invalid ${letter} ${newCount.count} ${actualNewCounts.get(letter).count}`);
                 break;
             }
         }
         if (newSentenceValid) {
-            console.log("Recursing");
             for (let val of suffer(newCounts)) {
                 yield val;
             }
         }
     }
-    console.log("Returning");
     return null;
 }
 
@@ -246,7 +245,6 @@ function updateTable() {
 let sentenceGenerator = suffer(new Map());
 function updateSuffering() {
     counts = sentenceGenerator.next().value;
-    console.log(counts);
     let sentenceNodes = renderSentence(counts);
     let sentenceElem = d3.select("#suffering-sentence").node();
     sentenceElem.innerHTML = "";

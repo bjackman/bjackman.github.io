@@ -45,25 +45,26 @@ proper computer,  anyway? Why  are your fingers  so fat? It's  not my  fault) to
 adjust the letter counts. I can't make it right. This may be funny but it is not
 satisfying.
 
-So, how do we go about generating them? The naïve approach above can get us
+So, how *do* we go about generating them? The naïve approach above can get us
 surprisingly far if we are careful about the order in which we tally the
-letters. If you cut this sentence off at any of the commas, you get a correct
-autogram[^1]:
+letters. This sentence is correct[^1]:
 
 > This pangram tallies one b, one c, five a's, two d's, one j, one k, two m's,
   two p's, one q, one z, one y, two g's, three l's, one u, five w's, thirteen
-  o's, three f's, three v's, six h's, and six r's
+  o's, three f's, three v's, six h's, and six r's.
 
-But here we are unavoidably stuck. Suppose we somehow managed to tally twenty
-five letters by this method. To add the final tally, we would need to use
-letters that have already been tallied, so the sentence would become false.
+We've tallied twenty letters here but we'll always get stuck at about this
+point. Suppose we somehow managed to tally twenty five letters by this
+method. To add the final tally, we would need to use letters that have already
+been tallied, so the sentence would become false.
 
 Do you hate computers? If you would like to see yours suffer, you can watch it
-trying to complete this impossible task here:
+trying to complete this impossible task here[^2]:
 
 <blockquote id="suffering-sentence" style="line-height: 2em; height: 6em"></blockquote>
 <button id="suffering-start">start</button>
 <button id="suffering-stop">stop</button>
+<button id="suffering-step">step</button>
 
 In theory it will admit defeat eventually, but if my calculations are correct,
 its stupid metal brain will oxidise into dust before that happens.
@@ -113,7 +114,7 @@ spectacular thing, because it turns logical puzzles inside out. Chris Patuzzo
 figured out a way of feeding the claim "there is a pangrammatic autogram" into a
 SAT-solver, and the SAT-solver spat out situations where that claim is true
 i.e. pangrammatic sentences. I have of course been glossing over the details -
-SAT-solvers do not really understand English[^2], you feed them formal logical
+SAT-solvers do not really understand English[^3], you feed them formal logical
 expressions, and they spit out lists of all the combinations of truth and
 falsehood that can make your overall expression true. The logical expression
 that I'm glossing over when I write "I am a mongoose" is very simple, it
@@ -140,13 +141,23 @@ beauty using Patuzzo's tool:
   t's, four u's, five v's, eight w's, two x's, four y's, and one z
 
 But, of course it would a cruel joke if I didn't end by telling you that this
-article[^3] contains and
+article[^4] contains and
 
 [^1]: Except that it claims to be a pangram
 
-[^2]: Actually, there has been lots of pretty cool research on writing programs
+[^2]: It's actually trying a little harder than I described; when it detects
+      that adding a new tally has falsified a previous part of the sentnce, it
+      makes a crude attempt to fix it in a single step. There's no reason this
+      should succeed in general, although I must admit I think there is some
+      risk that this addition to the strategy could allow the machine we're
+      torturing to achieve it's goal.
+
+[^3]: Actually, there has been lots of pretty cool research on writing programs
       that understand some parts of natural language and use it to do logical
       reasoning like SAT-solving. There was a time when some people thought this
-      might lead to real artificial intelligence!
+      might lead to strong artificial intelligence! One of the earliest and most
+      famous examples of this type of thing was a system called
+      [SHRDLU](https://en.wikipedia.org/wiki/SHRDLU), which is also discussed in
+      *Gödel, Escher, Bach*.
 
-[^3] Excluding the dynamic bits
+[^4]: Excluding the dynamic bits
