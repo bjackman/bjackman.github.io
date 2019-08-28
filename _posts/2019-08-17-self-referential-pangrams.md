@@ -10,7 +10,7 @@ though perhaps I never actually LOL'd at "the quick brown fox jumps over the
 lazy dog", I think they're sort of funny (maybe they are a weak form of Tom 7's
 ["improper hierarchy"](https://www.youtube.com/watch?v=ar9WRwCiSr0)).
 
-So this sentence in Douglas Hofstadter's later book *I am a Strange Loop* is
+So this, a sentence in Douglas Hofstadter's later book *I am a Strange Loop* is
 pretty captivating:
 
 > This pangram tallies five a's, one b, one c, two d's, twenty-eight e's, eight
@@ -39,7 +39,7 @@ red:
 <script src="/assets/js/pangrams.js"></script>
 
 Wait a second - Hofstadter's pangram  is wrong! It only contains twenty-one t's!
-See if you can  fix it by clicking the little '+'s and  '-s' (are they too small
+See if you can  fix it by clicking the little '+'s and  '-s' (are they too little
 for phone screens?  Sorry. Web design is  hard. Why aren't you reading this on a
 proper computer,  anyway? Why  are your fingers  so fat? It's  not my  fault) to
 adjust the letter counts. I can't make it right. This may be funny but it is not
@@ -69,7 +69,7 @@ trying to complete this impossible task here[^2]:
 In theory it will admit defeat eventually, but if my calculations are correct,
 its stupid metal brain will oxidise into dust before that happens.
 
-One way to think about the difficulty of generating pangrammatic autograms is to
+One way to think about the difficulty of generating pangram-autograms is to
 compare it to a slightly simpler problem: what if we don't care if the
 individual letter counts are correct, just that they add up to the right total?
 In that case, the only thing that matters about the phrase "one a" is that it
@@ -79,7 +79,7 @@ sum" problem](https://en.wikipedia.org/wiki/Subset_sum_problem). This is an
 *NP-complete* problem, which is a fancy way of saying it's "pretty tricky", but
 it can be solved quite speedily for the values we're interested in here. Before
 writing this article, I thought I could just write some code to generate these
-pseudo-autograms, then test loads of them until it found a true autogram among
+pseudo-autograms, then test loads of them until I found a true autogram among
 them. But the number of pseudo-autograms is vaster than I thought (I made the
 rookie mistake of underestimating the factorial function!) and proper autograms
 are a very slim subset of pseudo-autograms. My little laptop would take far too
@@ -109,9 +109,9 @@ spit out two valid situations:
 - You are indeed a mongoose, but you are not speaking
 - You are indeed speaking, but you are not a mongoose
 
-Such simple examples may not make it clear, but a SAT-solver is quite a
+Such a simplistic example may not make it clear, but a SAT-solver is quite a
 spectacular thing, because it turns logical puzzles inside out. Chris Patuzzo
-figured out a way of feeding the claim "there is a pangrammatic autogram" into a
+figured out a way of feeding the claim "there is a pangram-autogram" into a
 SAT-solver, and the SAT-solver spat out situations where that claim is true
 i.e. pangrammatic sentences. I have of course been glossing over the details -
 SAT-solvers do not really understand English[^3], you feed them formal logical
@@ -126,18 +126,18 @@ use. Patuzzo's work was to express "there is a pangrammatic autogram" in such
 specific terms that the SAT-solver had no choice but to spit out everything we
 need to know to write out the actual sentence.
 
-I would love to harp on about this until I feel I've really explained it but I
+I would love to harp on about this until I feel I've really explained, but I
 think it would take too long. One more analogy: this technique means that
 instead of having to answer the question "how do I find pangrammatic
 autograms?", you just have to answer "given a sentence, how do I figure out if
-it's a pangrammatic autogram?". The latter is obviously much easier. Patuzzo
+it's a pangram-autogram?". The latter is obviously much easier. Patuzzo
 clearly thought this was a pretty neat idea (and I agree), because he created an
 entire programming language, called [Sentient](https://sentient-lang.org), which
 helps you express many different problems in ways that bully SAT-solvers into
 solving them for you, as he did for the problem of pangrammatic autograms.
 
 This is pretty satisfying. In a few minutes my little laptop had generated this
-beauty using Patuzzo's tool:
+acmatic beauty using Patuzzo's tool:
 
 > This pangram tallies five a's, one b, one c, two d's, twenty nine e's, nine
   f's, four g's, six h's, thirteen i's, one j, one k, three l's, two m's, twenty
