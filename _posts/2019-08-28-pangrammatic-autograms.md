@@ -91,7 +91,8 @@ describes it rather well in [this podcast](https://whyarecomputers.com/4) so in
 the interest of variety I'll try to describe it in the opposite direction from
 his.
 
-One of the best known problems in computer science is "Boolean satisfiability",
+One of the best known problems in computer science is "[Boolean
+satisfiability](https://en.wikipedia.org/wiki/Boolean_satisfiability_problem)",
 or "SAT" for short. Suppose I tell you "either I am a mongoose, or I am
 speaking". This might be true, if I was truly a mongoose, or if I was truly
 speaking aloud. But if I tell you "I am a mongoose, and mongeese cannot speak,
