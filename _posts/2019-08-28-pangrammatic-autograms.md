@@ -10,7 +10,7 @@ though perhaps I never actually LOL'd at "the quick brown fox jumps over the
 lazy dog", I think they're sort of funny (maybe they are a weak form of Tom 7's
 ["improper hierarchy"](https://www.youtube.com/watch?v=ar9WRwCiSr0)).
 
-So this, a sentence in Douglas Hofstadter's later book *I am a Strange Loop* is
+So this, a sentence in Douglas Hofstadter's later book *I am a Strange Loop*, is
 pretty captivating:
 
 > This pangram tallies five a's, one b, one c, two d's, twenty-eight e's, eight
