@@ -114,7 +114,7 @@ Such a simplistic example may not make it clear, but a SAT-solver is quite a
 spectacular thing, because it turns logical puzzles inside out. Chris Patuzzo
 figured out a way of feeding the claim "there is a pangram-autogram" into a
 SAT-solver, and the SAT-solver spat out situations where that claim is true
-i.e. pangrammatic sentences. I have of course been glossing over the details -
+i.e. pangrammatic sentences. I have of course been glossing over the details;
 SAT-solvers do not really understand English[^3], you feed them formal logical
 expressions, and they spit out lists of all the combinations of truth and
 falsehood that can make your overall expression true. The logical expression
@@ -156,7 +156,7 @@ and eighty-one m's, five hundred and five n's, five hundred and thirty-five o's,
 one hundred and thirty-nine p's, nine q's, three hundred and ninety-nine r's,
 five hundred and sixty-four s's, seven hundred and thirty-nine t's, two hundred
 and seventy-four u's, eighty-one v's, one hundred and thirty w's, thirty-three
-x's, one hundred and sixty-nine y's, and eighteen z's
+x's, one hundred and sixty-nine y's, and eighteen z's.
 
 [^1]: Except that it claims to be a pangram
 
