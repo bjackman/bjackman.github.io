@@ -146,7 +146,16 @@ acmatic beauty using Patuzzo's tool:
 
 But, of course it would a cruel joke if I didn't also extend his tool a little
 bit so it could work on larger numbers. Otherwise I wouldn't be able to tell you
-that this article[^4] contains and
+that this article[^4] contains five hundred and sixty-four a's, eighty-seven
+b's, one hundred and seventy-five c's, two hundred and forty-four d's, eight
+hundred and fifty-five e's, one hundred and sixty-four f's, one hundred and
+eighty-six g's, three hundred and twenty-six h's, five hundred and thirty-one
+i's, eleven j's, forty-five k's, two hundred and ninety-four l's, one hundred
+and eighty-one m's, five hundred and five n's, five hundred and thirty-five o's,
+one hundred and thirty-nine p's, nine q's, three hundred and ninety-nine r's,
+five hundred and sixty-four s's, seven hundred and thirty-nine t's, two hundred
+and seventy-four u's, eighty-one v's, one hundred and thirty w's, thirty-three
+x's, one hundred and sixty-nine y's, and eighteen z's
 
 [^1]: Except that it claims to be a pangram
 
