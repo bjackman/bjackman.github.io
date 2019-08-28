@@ -91,7 +91,7 @@ describes it rather well in [this podcast](https://whyarecomputers.com/4) so in
 the interest of variety I'll try to describe it in the opposite direction from
 his.
 
-One of the best known problems in computer science is "boolean satisfiability",
+One of the best known problems in computer science is "Boolean satisfiability",
 or "SAT" for short. Suppose I tell you "either I am a mongoose, or I am
 speaking". This might be true, if I was truly a mongoose, or if I was truly
 speaking aloud. But if I tell you "I am a mongoose, and mongeese cannot speak,
@@ -126,11 +126,15 @@ use. Patuzzo's work was to express "there is a pangrammatic autogram" in such
 specific terms that the SAT-solver had no choice but to spit out everything we
 need to know to write out the actual sentence.
 
-Patuzzo clearly thought this was a pretty neat idea (and I agree), because he
-created an entire programming language, called
-[Sentient](https://sentient-lang.org), which helps you express problems in ways
-that bully SAT-solvers into solving them for you, as he did for the problem of
-pangrammatic autograms.
+I would love to harp on about this until I feel I've really explained it but I
+think it would take too long. One more analogy: this technique means that
+instead of having to answer the question "how do I find pangrammatic
+autograms?", you just have to answer "given a sentence, how do I figure out if
+it's a pangrammatic autogram?". The latter is obviously much easier. Patuzzo
+clearly thought this was a pretty neat idea (and I agree), because he created an
+entire programming language, called [Sentient](https://sentient-lang.org), which
+helps you express many different problems in ways that bully SAT-solvers into
+solving them for you, as he did for the problem of pangrammatic autograms.
 
 This is pretty satisfying. In a few minutes my little laptop had generated this
 beauty using Patuzzo's tool:
@@ -140,17 +144,18 @@ beauty using Patuzzo's tool:
   one n's, fifteen o's, two p's, one q, seven r's, twenty five s's, eighteen
   t's, four u's, five v's, eight w's, two x's, four y's, and one z
 
-But, of course it would a cruel joke if I didn't end by telling you that this
-article[^4] contains and
+But, of course it would a cruel joke if I didn't also extend his tool a little
+bit so it could work on larger numbers. Otherwise I wouldn't be able to tell you
+that this article[^4] contains and
 
 [^1]: Except that it claims to be a pangram
 
 [^2]: It's actually trying a little harder than I described; when it detects
-      that adding a new tally has falsified a previous part of the sentnce, it
+      that adding a new tally has falsified a previous part of the sentence, it
       makes a crude attempt to fix it in a single step. There's no reason this
       should succeed in general, although I must admit I think there is some
       risk that this addition to the strategy could allow the machine we're
-      torturing to achieve it's goal.
+      torturing to achieve its goal.
 
 [^3]: Actually, there has been lots of pretty cool research on writing programs
       that understand some parts of natural language and use it to do logical
