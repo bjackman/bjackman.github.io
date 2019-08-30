@@ -218,7 +218,7 @@ function updateTable() {
     let tdEnter = td.enter().append("td")
         .style("display", "inline-block")
         .style("font-family", "monospace")
-        .style("padding", "8px")
+        .style("padding", "4px")
         .text(d => `${d.letter}: `);
     tdEnter.append("span").attr("class", "claimed-count").text(genClaimedCountText);
     tdEnter.append("span").style("cursor", "pointer").text("+").on("click", d => {
