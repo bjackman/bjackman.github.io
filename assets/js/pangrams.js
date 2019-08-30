@@ -212,8 +212,14 @@ function updateTable() {
     let sentenceString = createSentence(counts);
     let actualCounts = countLetters(sentenceString);
 
-    let tdEnter = td.enter().append("td").style("display", "inline-block").text(d => `${d.letter}: `);;
-    tdEnter.append("span").attr("class", "claimed-count").text(d => d.count);
+    genClaimedCountText = d => `${d.count}`.padEnd(2, "\xa0");
+    genActualCountText = d => `(${actualCounts.get(d.letter).count})`.padStart(4, "\xa0");
+
+    let tdEnter = td.enter().append("td")
+        .style("display", "inline-block")
+        .style("font-family", "monospace")
+        .text(d => `${d.letter}: `);
+    tdEnter.append("span").attr("class", "claimed-count").text(genClaimedCountText);
     tdEnter.append("span").style("cursor", "pointer").text("+").on("click", d => {
         if (d.count < 50)
             d.count++;
@@ -225,13 +231,13 @@ function updateTable() {
         updateTable()
     });
     tdEnter.append("span").attr("class", "actual-count")
-        .text(d => `(${actualCounts.get(d.letter).count})`)
+        .text(genActualCountText)
         .style("color", d => actualCounts.get(d.letter).count != d.count ? "red" : "gray");
 
 
-    td.selectAll(".claimed-count").text(d => d.count);
+    td.selectAll(".claimed-count").text(genClaimedCountText);
     td.selectAll(".actual-count")
-        .text(d => `(${actualCounts.get(d.letter).count})`)
+        .text(genActualCountText)
         .style("color", d => actualCounts.get(d.letter).count != d.count ? "red" : "gray");
 
     let sentenceNodes = renderSentence(counts);
