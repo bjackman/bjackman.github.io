@@ -14,22 +14,21 @@ out](https://www.reddit.com/r/programming/comments/cxusz6/pangrammatic_autograms
 that I am a completely useless idiot and deserve to be cast into the North Sea
 on a raft of overripe bananas, because the reason why my cute tool found
 Hofstadter's pangram to be bogus was simply that it didn't account for capital
-letters.
+letters. I usually consider myself a competent programmer so this is pretty
+embarrassing. I should probably add some daily self-flaggelation to my
+banana-raft itinerary.
 
-I'd actually originally written my tool in Python, and accounted for this issue,
-but when translating to JavaScript I omitted it. Pretty pathetic.
+Anyway, despite my slanderous repudiation a claim made by an intellectual hero,
+the widget still does its job of illustrating the difficulty of getting to a
+pan-autogram. So the article's core message is in tact, even if the self-respect
+of its author is in tatters.
 
-Anyway, despite my slanderous repduation, the cute tool still does its job of
-illustrating the difficulty of getting a pan-autogram. So the article now serves
-a dual purpose of expoisition about the beauty of the problem, and also
-illustrating the dog-turd intellectual value its author.
-
-## Addendum
+## One more thing!
 
 One more note about that article. The party trick at the end was trickier than
 you might think. I extended Patuzzos's Sentient tool and fed it in my article as
 the "seed sentence", but it didn't have any solutions! With the article as it
-stood, it was impossible to make it pan-autogrammatic. It's intuitively not too
+stood, it was impossible to make it self-enumerating. It's intuitively not too
 surprising that as the seed sentence gets longer (i.e. grows from "this sentence
 contains ... and" to the entirety of my article), the likelihood that there is a
 valid solution begins to wane.
@@ -41,6 +40,6 @@ further, to find near-miss autograms, where the resultant article would
 leaving my laptop whirring overnight, I found a set of tallies that would be
 correct if I simply removed three m's, one s, and one t from the other parts of
 the article. This took a bit of fiddling - I had to add and remove a few letters
-and shoehorn in the words "acmatic" to reach the right aggregate change in
-letter counts. You can see the changes I made
+and shoehorn in the word "acmatic" to reach the right aggregate change in letter
+counts. You can see the changes I made to the article
 [here](https://github.com/bjackman/bjackman.github.io/commit/9d207f15f3b75630d50fc6e0c7dab187ef192a83).
