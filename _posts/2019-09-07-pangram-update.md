@@ -28,10 +28,10 @@ of its author is in tatters.
 One more note about that article. The party trick at the end was trickier than
 you might think. I extended Patuzzos's Sentient tool and fed it in my article as
 the "seed sentence", but it didn't have any solutions! With the article as it
-stood, it was impossible to make it self-enumerating. It's intuitively not too
-surprising that as the seed sentence gets longer (i.e. grows from "this sentence
-contains ... and" to the entirety of my article), the likelihood that there is a
-valid solution begins to wane.
+stood, it was impossible to make it accurately autogrammatic. It's intuitively
+not too surprising that as the seed sentence gets longer (i.e. grows from "this
+sentence contains ... and" to the entirety of my article), the likelihood that
+there is a valid solution begins to wane.
 
 So I actually [extended the
 tool](https://gist.github.com/bjackman/4b0ccb3f91a3b9c214872ed518c9ced9)
