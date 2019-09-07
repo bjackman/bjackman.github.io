@@ -20,7 +20,7 @@ banana-raft itinerary.
 
 Anyway, despite my slanderous repudiation a claim made by an intellectual hero,
 the widget still does its job of illustrating the difficulty of getting to a
-pan-autogram. So the article's core message is in tact, even if the self-respect
+pan-autogram. So the article's core message is intact, even if the self-respect
 of its author is in tatters.
 
 ## One more thing!
