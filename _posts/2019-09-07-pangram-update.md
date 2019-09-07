@@ -34,11 +34,13 @@ surprising that as the seed sentence gets longer (i.e. grows from "this sentence
 contains ... and" to the entirety of my article), the likelihood that there is a
 valid solution begins to wane.
 
-So I actually extended the tool further, to find near-miss autograms, where the
-resultant article would *almost*, but not quite accurately tally all its
-constituent letters. After leaving my laptop whirring overnight, I found a set
-of tallies that would be correct if I simply removed three m's, one s, and one t
-from the other parts of the article. This took a bit of fiddling - I had to add
-and remove a few letters and shoehorn in the words "acmatic" to reach the right
-aggregate change in letter counts. You can see the changes I made
+So I actually [extended the
+tool](https://gist.github.com/bjackman/4b0ccb3f91a3b9c214872ed518c9ced9)
+further, to find near-miss autograms, where the resultant article would
+*almost*, but not quite accurately tally all its constituent letters. After
+leaving my laptop whirring overnight, I found a set of tallies that would be
+correct if I simply removed three m's, one s, and one t from the other parts of
+the article. This took a bit of fiddling - I had to add and remove a few letters
+and shoehorn in the words "acmatic" to reach the right aggregate change in
+letter counts. You can see the changes I made
 [here](https://github.com/bjackman/bjackman.github.io/commit/9d207f15f3b75630d50fc6e0c7dab187ef192a83).
