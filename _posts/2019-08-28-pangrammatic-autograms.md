@@ -38,12 +38,12 @@ red:
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="/assets/js/pangrams.js"></script>
 
-Wait a second - Hofstadter's pangram  is wrong! It only contains twenty-one t's!
-See if you can  fix it by clicking the little '+'s and  '-s' (are they too little
-for phone screens?  Sorry. Web design is  hard. Why aren't you reading this on a
-proper computer,  anyway? Why  are your fingers  so fat? It's  not my  fault) to
-adjust the letter counts. I can't make it right. This may be funny but it is not
-satisfying.
+[Wait a second - Hofstadter's pangram is wrong! It only contains twenty-one
+t's!]({% post_url 2019-09-07-pangram-update %}) See if you can fix it by
+clicking the little '+'s and '-s' (are they too little for phone screens?
+Sorry. Web design is hard. Why aren't you reading this on a proper computer,
+anyway? Why are your fingers so fat? It's not my fault) to adjust the letter
+counts. I can't make it right. This may be funny but it is not satisfying.
 
 So, how *do* we go about generating them? The naïve approach above can get us
 surprisingly far if we are careful about the order in which we tally the
