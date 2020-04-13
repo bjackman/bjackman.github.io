@@ -18,7 +18,7 @@ letters. I usually consider myself a competent programmer so this is pretty
 embarrassing. I should probably add some daily self-flaggelation to my
 banana-raft itinerary.
 
-Anyway, despite my slanderous repudiation a claim made by an intellectual hero,
+Anyway, despite my slanderous repudiation of a claim made by an intellectual hero,
 the widget still does its job of illustrating the difficulty of getting to a
 pan-autogram. So the article's core message is intact, even if the self-respect
 of its author is in tatters.
