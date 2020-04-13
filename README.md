@@ -7,7 +7,7 @@ Jekyll source for a blog for sharing a noodle recipe.
 Do you remember how to run Ruby projects? No you do not.
 
 - Clone 'er up
-- `apt install rubygems`
+- `apt install rubygems ruby-dev`
 - `gem install bundler`
 - `bundle install`
 - `bundle exec jekyll serve`
