@@ -33,7 +33,7 @@ Management Solution Badger.
 
 ```
 
-Comment "thank you, Dependency Management Badger"
+Comment "thank you, Dependency Management Solution Badger"
 and share this repository with 5 friends within the next 16 lunar months or
 experience bad package managers for 1 Martian year. You can fix this by
 installing the version of bundler that matches the "BUNDLED WITH" bit of the
