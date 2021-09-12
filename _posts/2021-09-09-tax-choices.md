@@ -15,10 +15,10 @@ That was not the hottest of takes. The actual reason I've taken to the blogosphe
 
 ![BBC graph of absolute tax rates vs. income](/assets/tax_rates_absolute.png)
 
-Not only did they from inexplicably include income tax (which is progressive) on the graph, they also chose to plot _absolute_ tax rates in pounds. This is not a useful way to visualise taxation, unless you want to give the false impression that higher-income taxpayers are being squeezed harder than everyone else.
+Not only did they inexplicably include income tax (which is progressive) on the graph, they also chose to plot _absolute_ tax rates in pounds. This is not a useful way to visualise taxation, unless you want to give the false impression that higher-income taxpayers are being squeezed harder than everyone else.
 
 Instead, sensible people talk in terms _effective_ tax rates as a percentage. Here's the effective rate of National Insurance, plotted against income:
 
 ![My graph of effective tax rates vs. income](/assets/ni_rate_effective.png)
 
-The line in this graph goes _down_. That's because this is an unfair regressive tax. __Someone earning £100,000 a year pays a lower effective rate than someone earning £24,000__. Instead of being increase, National Insurance should be scrapped and replaced with a progressive wealth tax.
+The line in this graph goes _down_. That's because this is an unfair regressive tax. __Someone earning £100,000 a year pays a lower effective rate than someone earning £24,000__. Instead of being increased, National Insurance should be scrapped and replaced with a progressive wealth tax.
