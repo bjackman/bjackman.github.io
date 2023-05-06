@@ -4,6 +4,8 @@ Jekyll source for a blog for sharing a noodle recipe.
 
 # Developing
 
+Lol, as of 2023-05-06 this doesn't work. Just push to master and see what happens lol.
+
 Do you remember how to run Ruby projects? No you do not.
 
 - Clone 'er up
