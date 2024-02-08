@@ -1,4 +1,8 @@
-# WENUS Priests
+---
+layout: post
+title:  "WENUS Priests"
+date:   2024-02-07 19:56:03 +0100
+---
 
 I work for a big tech company. I have a laptop that I carry to work in my bike
 bag and plug into the screens and keyboard and mouse. I mainly use it to log
