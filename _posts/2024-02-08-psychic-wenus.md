@@ -24,7 +24,7 @@ I work on security features for platform software. It's very hard to explain
 what the features do, even to software engineers with security expertise. It's
 very hard for us to be sure that the features are working. They don't do
 anything at all that's easy to detect, only smooth out the statistical
-likelihood of certain invisible events inside CPUs. But they coudl harm the
+likelihood of certain invisible events inside CPUs. But they could harm the
 performance of customer workloads.
 
 We take lots of care to minimise the performance impact for customers. I don't
