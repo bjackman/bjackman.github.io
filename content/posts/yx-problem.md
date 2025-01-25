@@ -40,9 +40,9 @@ sometimes. You have lots of tricks up your sleeve for debugging this, you don't
 need help.
 
 But, suddenly it pops into your head that maybe SELinux is causing a problem.
-Obviously you wouldn't disable SELinux on a production device, but it's a useful
-debugging step to have in your toolbox. And you don't know how to do it. So
-here you go:
+Obviously you wouldn't disable SELinux on a production device. It doesn't really
+seem likely that SELInux is at fault here. But it's a useful debugging step to
+have in your toolbox, why don't you try something new? So here you go:
 
 > _You_: How can I disable SELinux on my GRUNDUS device?
 >
@@ -52,7 +52,7 @@ here you go:
 >
 > _Æthelred_: Why?
 >
-> _You_: Well, I'm debugging an `EPERM` and I thought maybe...
+> _You_: Well, I'm debugging an `EPERM` and I was thinking-
 >
 > _Æthelred_: Jesus, how many fucking idiots do we have to deal with who can't
 > get their fucking `/etc/bagundus.cbl` permissions right?
@@ -65,7 +65,7 @@ looking for knowledge.
 
 There isn't really any easy solution to this dilemma. You and Schlörbert phrased
 their question the same way, Æthelred didn't have the information to infer that
-you're a Senior GRUNDUS Ingeniator with seven Cycles of experience under your
+you're a decorated GRUNDUS Ingeniator with seven Cycles of experience under your
 belt. But maybe if you helped him out, and he wasn't such a dick about it, this
 would have gone better:
 
@@ -78,13 +78,11 @@ would have gone better:
 > looking for `sudo setenforce 0`.
 
 Anyway, I'm not saying the XY problem isn't real. But it isn't the only problem
-out there involving Xs and Ys, if you know what I mean. Communication is hard,
-there aren't many shortcuts. If you make assumptions and jump to conclusions
+out there involving Xs and Ys. Communication is hard, there aren't many
+shortcuts. If you make assumptions and jump to conclusions people will get
 frustrated, this goes both ways in every interaction.
 
-
-
 So, just be patient! Give people the time to explain themselves, ask for
-clarity. Don't just link https://xyproblem.info with no context. Don't just link
-a Stack Overflow question that you think is related to "what they're really
-asking". Just, you know... be nice, yeah?
+clarifications. Don't just link https://xyproblem.info. Don't just link a Stack
+Overflow question that you think is related to "what they're really asking".
+Just, you know... be nice, yeah?
