@@ -1,4 +1,10 @@
-k# My blong
+# My blong
+
+For Ubuntu: `sudo snap install hugo`
+
+Then: `hugo serve`. This should auto-reload and shit.
+
+## Notes on port from Jekyll
 
 TODOs after `hugo import`ing from old Jekyll version:
 
@@ -31,6 +37,6 @@ TODOs after `hugo import`ing from old Jekyll version:
 - [x] Try to make old links work. (`permalinks` section of config?)
 - [x] Fix the copyright thingy
 - [x] Improve the "up" link for non-nerds
-- [ ] Deploy that thang
+- [x] Deploy that thang
 - [ ] Add a favicon or something?
 - [ ] Use a more gentle color theme?
