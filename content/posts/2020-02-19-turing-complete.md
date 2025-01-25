@@ -1,8 +1,10 @@
 ---
-layout: post
-title:  "eBPF is Turing Complete"
-date:   2020-02-19 23:43:00 +0100
-categories: jekyll update
+date: "2020-02-19T23:43:00Z"
+title: eBPF is Turing Complete
+slug: turing-complete
+# Legacy URL from old Jekyll days. The /jekyll/update was because I had some
+# acciedental garbage in the front matter for this post.
+url: /jekyll/update/:year/:month/:day/:slug.html
 ---
 
 

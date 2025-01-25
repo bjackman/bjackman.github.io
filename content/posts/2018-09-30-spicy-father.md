@@ -1,8 +1,9 @@
 ---
-layout: post
-title:  "Papi Picante's \"Spicy Father\" Noodle Soup"
-date:   2018-09-30 14:28:03 +0100
 categories: recipes
+date: "2018-09-30T14:28:03Z"
+title: Papi Picante's "Spicy Father" Noodle Soup
+slug: spicy-father
+url: /recipes/:year/:month/:day/:slug.html
 ---
 
 Here is the long-awaited recipe for Papi Picante's "Spicy Father" sort-of-Sichuan-style noodle soup. ~~I forgot to take pictures of the actual food, so you'll just have to make it to see how it looks~~.

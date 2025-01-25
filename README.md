@@ -1,42 +1,36 @@
-# bjackman.github.io
+k# My blong
 
-Jekyll source for a blog for sharing a noodle recipe.
+TODOs after `hugo import`ing from old Jekyll version:
 
-# Developing
+- [x] Figure out why I can't see any pages
+- [x] Add a list to the homepage
 
-Lol, as of 2023-05-06 this doesn't work. Just push to master and see what happens lol.
+  The theme I started with doesn't list posts on its default home page. I tried
+  just copying its "list page" template there but it didn't work. So I started
+  trying different themes.
 
-Do you remember how to run Ruby projects? No you do not.
+  - Ananke is something like a "default" so I didn't wanna use it. I don't get a
+    list on the homepage.
+  - "Introduction" doesn't generate a list and seems quite complex.
+  - "Mini" doesn't build
 
-- Clone 'er up
-- `apt install rubygems ruby-dev`
-- `gem install bundler`
-- `bundle install`
-- `bundle exec jekyll serve`
+  Then while fiddling around with the "nostyleplease" theme I realised that it
+  starts working if I remove dates from the filenames. What's up with that? I
+  think maybe Hugo or the themes are buggy when switching between themes. This
+  issue went away when I cleaned up the repo for the commit that added the
+  theme. Not sure this is really the theme I want but it works so let's just
+  start from here.
 
-If you get an error like "can't find gem bundler (>= 0.a) with executable bundle
-(Gem::GemNotFoundException)", congratulations you have met the Dependency
-Management Solution Badger.
-
-
-```
-                ___,,___
-           _,-='=- =-  -`"--.__,,.._
-        ,-;// /  - -       -   -= - "=.
-      ,'///    -     -   -   =  - ==-=\`.
-     |/// /  =    `. - =   == - =.=_,,._ `=/|
-    ///    -   -    \  - - = ,ndDMHHMM/\b  \\
-  ,' - / /        / /\ =  - /MM(,,._`YQMML  `|
- <_,=^Kkm / / / / ///H|wnWWdMKKK#""-;. `"0\  |
-        `""QkmmmmmnWMMM\""WHMKKMM\   `--. \> \
- hjm          `""'  `->>>    ``WHMb,.    `-_<@)
-                                `"QMM`.
-                                   `>>>
-
-```
-
-Comment "thank you, Dependency Management Solution Badger"
-and share this repository with 5 friends within the next 16 lunar months or
-experience bad package managers for 1 Martian year. You can fix this by
-installing the version of bundler that matches the "BUNDLED WITH" bit of the
-`Gemfile.lock`.
+  Anyway, let's try that...
+- [x] Bring back my fancy old 404 page
+- [x] Look through deleted files and figure out if anything that looks important
+  was lost
+- [x] Check all  pages still work
+  - [x] Fix links between posts
+  - [x] Make pictures work
+- [x] Try to make old links work. (`permalinks` section of config?)
+- [x] Fix the copyright thingy
+- [x] Improve the "up" link for non-nerds
+- [ ] Deploy that thang
+- [ ] Add a favicon or something?
+- [ ] Use a more gentle color theme?

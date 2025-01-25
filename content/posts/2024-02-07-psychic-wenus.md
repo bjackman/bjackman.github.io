@@ -1,7 +1,9 @@
 ---
-layout: post
-title:  "WENUS Priests"
-date:   2024-02-07 19:56:03 +0100
+date: "2024-02-07T19:56:03Z"
+title: WENUS Priests
+slug: psychic-wenus
+# Legacy URL from Jekyll
+url: /:year/:month/:day/:slug.html
 ---
 
 I work for a big tech company. I have a laptop that I carry to work in my bike

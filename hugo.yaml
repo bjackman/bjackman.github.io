@@ -1,0 +1,17 @@
+baseURL: "https://yawn.io"
+disablePathToLower: true
+languageCode: en-gb
+title: Papi Picante's Spice Log
+theme: nostyleplease
+enableRobotsTXT: true
+markup:
+  goldmark:
+    renderer:
+      # Enable embedding random HTML garbage in Markdown. This is OK because
+      # it's all my own garbage.
+      unsafe: true
+params:
+  theme_config:
+    isShowFooter: false
+    back_home_text: "← home"
+    appearance: auto

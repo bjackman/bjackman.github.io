@@ -1,10 +1,13 @@
 ---
-layout: post
-title:  "A Humiliating Update on 'Pangrammatic Autograms'"
+date: "2019-09-07T00:00:00Z"
+title: A Humiliating Update on 'Pangrammatic Autograms'
+slug: pangram-update
+# Legacy URL from Jekyll
+url: /:year/:month/:day/:slug.html
 ---
 
-In my [previous post on "pangrammatic autograms"]({% post_url
-2019-08-28-pangrammatic-autograms %}), I included a cute tool to fiddle with
+In my [previous post on "pangrammatic autograms"]({{< ref
+2019-08-28-pangrammatic-autograms >}}), I included a cute tool to fiddle with
 these magical sentences and see whether they were correct. I then exclaimed (!)
 that the pan-autogram that I found in Hofstadter's *I Am A Strange Loop* was
 *incorrect*!
