@@ -48,3 +48,4 @@ TODOs after `hugo import`ing from old Jekyll version:
       ```
 - [ ] Deploy that thang
 - [ ] Try to make old links work. (`permalinks` section of config?)
+- [ ] Add a favicon or something?
