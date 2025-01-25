@@ -59,8 +59,9 @@ here you go:
 >
 > _You_: OK, well, yeah actually I do have the wrong permissions on that file.
 
-Nobody learned anything here. Æthelred failed to understand that sometimes
-questions are just questions, and people are just looking for knowledge.
+Nobody learned anything here, and nobody had any fun. Æthelred failed to
+understand that sometimes questions are just questions, and people are just
+looking for knowledge.
 
 There isn't really any easy solution to this dilemma. You and Schlörbert phrased
 their question the same way, Æthelred didn't have the information to infer that
@@ -77,11 +78,13 @@ would have gone better:
 > looking for `sudo setenforce 0`.
 
 Anyway, I'm not saying the XY problem isn't real. But it isn't the only problem
-out there. Communication is hard, there aren't many shortcuts. If you make
-assumptions and jump to conclusions people will get frustrated, this goes both
-ways in every interaction.
+out there involving Xs and Ys, if you know what I mean. Communication is hard,
+there aren't many shortcuts. If you make assumptions and jump to conclusions
+frustrated, this goes both ways in every interaction.
+
+
 
 So, just be patient! Give people the time to explain themselves, ask for
 clarity. Don't just link https://xyproblem.info with no context. Don't just link
 a Stack Overflow question that you think is related to "what they're really
-asking". Just... be nice, yeah?
+asking". Just, you know... be nice, yeah?
