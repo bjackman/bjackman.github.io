@@ -6,4 +6,4 @@
 	url = git@github.com:hanwenguo/hugo-theme-nostyleplease.git
 [submodule "themes/nostyleplease"]
 	path = themes/nostyleplease
-	url = git@github.com:hanwenguo/hugo-theme-nostyleplease.git
+	url = git@github.com:bjackman/hugo-theme-nostyleplease.git

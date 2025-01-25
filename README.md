@@ -3,7 +3,7 @@ k# My blong
 TODOs after `hugo import`ing from old Jekyll version:
 
 - [x] Figure out why I can't see any pages
-- [ ] Add a list to the homepage
+- [x] Add a list to the homepage
 
   The theme I started with doesn't list posts on its default home page. I tried
   just copying its "list page" template there but it didn't work. So I started
@@ -22,7 +22,7 @@ TODOs after `hugo import`ing from old Jekyll version:
   start from here.
 
   Anyway, let's try that...
-- [ ] Bring back my fancy old 404 page
+- [x] Bring back my fancy old 404 page
 - [ ] Look through deleted files and figure out if anything important was lost:
 
       ```
