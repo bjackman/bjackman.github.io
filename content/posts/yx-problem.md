@@ -52,7 +52,7 @@ here you go:
 >
 > _Æthelred_: Why?
 >
-> _You_: Well, I'm debugging an EPERM and I thought maybe...
+> _You_: Well, I'm debugging an `EPERM` and I thought maybe...
 >
 > _Æthelred_: Jesus, how many fucking idiots do we have to deal with who can't
 > get their fucking `/etc/bagundus.cbl` permissions right?
