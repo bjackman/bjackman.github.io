@@ -2,5 +2,5 @@ baseURL: "https://yawn.io"
 disablePathToLower: true
 languageCode: en-gb
 title: Papi Picante's Spice Log
-theme: hugo-simple
+theme: nostyleplease
 enableRobotsTXT: true
