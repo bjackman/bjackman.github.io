@@ -1,6 +1,3 @@
-[submodule "themes/hugo-simple"]
-	path = themes/hugo-simple
-	url = https://github.com/maolonglong/hugo-simple.git
 [submodule "themes/themes/no-style-please"]
 	path = themes/themes/nostyleplease
 	url = git@github.com:hanwenguo/hugo-theme-nostyleplease.git
