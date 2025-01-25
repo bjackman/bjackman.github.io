@@ -29,4 +29,4 @@ TODOs after `hugo import`ing from old Jekyll version:
       ignoreLogs = ['warning-goldmark-raw-html']
       ```
 - [ ] Deploy that thang
-- [ ] Try to make old links work.
+- [ ] Try to make old links work. (`permalinks` section of config?)
