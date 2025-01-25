@@ -3,3 +3,4 @@ disablePathToLower: true
 languageCode: en-gb
 title: Papi Picante's Spice Log
 theme: hugo-simple
+enableRobotsTXT: true
