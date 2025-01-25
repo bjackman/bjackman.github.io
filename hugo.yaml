@@ -13,3 +13,5 @@ markup:
 params:
   theme_config:
     isShowFooter: false
+    back_home_text: "← home"
+    appearance: auto

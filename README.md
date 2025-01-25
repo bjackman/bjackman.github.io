@@ -29,8 +29,8 @@ TODOs after `hugo import`ing from old Jekyll version:
   - [x] Fix links between posts
   - [x] Make pictures work
 - [x] Try to make old links work. (`permalinks` section of config?)
-- [ ] Add a favicon or something?
-- [ ] Fix the copyright thingy
-- [ ] Improve the "up" link for non-nerds
-- [ ] Use a more gentle color theme?
+- [x] Fix the copyright thingy
+- [x] Improve the "up" link for non-nerds
 - [ ] Deploy that thang
+- [ ] Add a favicon or something?
+- [ ] Use a more gentle color theme?
