@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Pangrammatic Autograms"
+date: "2019-08-28T00:00:00Z"
+title: Pangrammatic Autograms
 ---
 
 In *Gödel, Escher, Bach*, Douglas Hofstadter lays out how self-reference

@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "A Humiliating Update on 'Pangrammatic Autograms'"
+date: "2019-09-07T00:00:00Z"
+title: A Humiliating Update on 'Pangrammatic Autograms'
 ---
 
 In my [previous post on "pangrammatic autograms"]({% post_url

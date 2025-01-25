@@ -1,8 +1,7 @@
 ---
-layout: post
-title:  "Tax Choices"
-date:   2021-09-09 10:00:00 +0200
 categories: foo
+date: "2021-09-09T10:00:00Z"
+title: Tax Choices
 ---
 
 Today Boris Johnson's Commons majority voted to break their manifesto promise by increasing National Insurance in England.

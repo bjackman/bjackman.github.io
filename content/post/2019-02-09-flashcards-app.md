@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "Finding a flashcard app to learn vocabulary"
+date: "2019-02-09T00:00:00Z"
+title: Finding a flashcard app to learn vocabulary
 ---
 
 I wanted an app to learn Vietnamese vocab. My requirements are:
