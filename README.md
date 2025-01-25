@@ -4,6 +4,8 @@ For Ubuntu: `sudo snap install hugo`
 
 Then: `hugo serve`. This should auto-reload and shit.
 
+To create a new post: `hugo new content content/posts/name.md`.
+
 ## Notes on port from Jekyll
 
 TODOs after `hugo import`ing from old Jekyll version:
