@@ -23,15 +23,8 @@ TODOs after `hugo import`ing from old Jekyll version:
 
   Anyway, let's try that...
 - [x] Bring back my fancy old 404 page
-- [ ] Look through deleted files and figure out if anything important was lost:
-
-      ```
-        deleted:    _assets/js/pangrams.html
-        deleted:    _config.yml
-        deleted:    _posts/table.html
-        deleted:    about.md
-        deleted:    creeps_tutorial.html
-      ```
+- [x] Look through deleted files and figure out if anything that looks important
+  was lost
 - [ ] Check all  pages still work
 - [ ] Deploy that thang
 - [ ] Try to make old links work. (`permalinks` section of config?)
