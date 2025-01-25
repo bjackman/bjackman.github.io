@@ -26,7 +26,7 @@ TODOs after `hugo import`ing from old Jekyll version:
 - [x] Look through deleted files and figure out if anything that looks important
   was lost
 - [ ] Check all  pages still work
-- [ ] Deploy that thang
+  - [x] Fix links between posts
 - [ ] Try to make old links work. (`permalinks` section of config?)
 - [ ] Add a favicon or something?
 - [ ] Fix the copyright thingy

@@ -39,7 +39,7 @@ red:
 <script src="/assets/js/pangrams.js"></script>
 
 [Wait a second - Hofstadter's pangram is wrong! It only contains twenty-one
-t's!]({% post_url 2019-09-07-pangram-update %}) See if you can fix it by
+t's!]({{< ref "2019-09-07-pangram-update" >}}) See if you can fix it by
 clicking the little '+'s and '-s' (are they too little for phone screens?
 Sorry. Web design is hard. Why aren't you reading this on a proper computer,
 anyway? Why are your fingers so fat? It's not my fault) to adjust the letter
