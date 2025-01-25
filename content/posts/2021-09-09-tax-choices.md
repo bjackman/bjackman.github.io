@@ -1,7 +1,9 @@
 ---
-categories: foo
 date: "2021-09-09T10:00:00Z"
 title: Tax Choices
+slug: tax-choices
+# Legacy URL from Jekyll. The /foo is from accidental garbage that was in the front matter.
+url: /foo/:year/:month/:day/:slug.html
 ---
 
 Today Boris Johnson's Commons majority voted to break their manifesto promise by increasing National Insurance in England.

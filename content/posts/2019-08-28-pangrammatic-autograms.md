@@ -1,6 +1,9 @@
 ---
 date: "2019-08-28T00:00:00Z"
 title: Pangrammatic Autograms
+slug: pangrammatic-autograms
+# Legacy URL from Jekyll
+url: /:year/:month/:day/:slug.html
 ---
 
 In *Gödel, Escher, Bach*, Douglas Hofstadter lays out how self-reference
