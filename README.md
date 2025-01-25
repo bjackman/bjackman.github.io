@@ -2,7 +2,8 @@
 
 TODOs after `hugo import`ing from old Jekyll version:
 
-- [ ] Figure out why I can't see any pages
+- [x] Figure out why I can't see any pages
+- [ ] Add a list to the homepage
 - [ ] Bring back my fancy old 404 page
 - [ ] Look through deleted files and figure out if anything important was lost:
 
@@ -20,10 +21,12 @@ TODOs after `hugo import`ing from old Jekyll version:
 - [ ] Check all  pages still work
 - [ ] Figure this shit out:
       ```
-      WARN  found no layout file for "html" for kind "home": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
-      WARN  found no layout file for "html" for kind "page": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
-      WARN  found no layout file for "html" for kind "taxonomy": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
-      WARN  found no layout file for "html" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
-      WARN  found no layout file for "html" for kind "section": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
+      WARN  Raw HTML omitted while rendering "/home/brendan/src/bjackman.github.io/content/posts/2023-05-06-german.md"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+      You can suppress this warning by adding the following to your site configuration:
+      ignoreLogs = ['warning-goldmark-raw-html']
+      WARN  Raw HTML omitted while rendering "/home/brendan/src/bjackman.github.io/content/posts/2019-08-28-pangrammatic-autograms.md"; see https://gohugo.io/getting-started/configuration-markup/#rendererunsafe
+      You can suppress this warning by adding the following to your site configuration:
+      ignoreLogs = ['warning-goldmark-raw-html']
       ```
 - [ ] Deploy that thang
+- [ ] Try to make old links work.
