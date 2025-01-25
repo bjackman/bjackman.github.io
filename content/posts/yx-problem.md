@@ -34,9 +34,10 @@ Lunar Orbit. It's fair for Æthelred to complain about this. But the latter
 outcome is much more likely and it's just... not that bad.
 
 Meanwhile, I think the opposite situation can be just as annoying for everyone,
-and warrants its own name. Imagine you are developing your GRUNDUS app and
-hitting `EPERM`s. You're used to this, GRUNDUS is like that sometimes. You have
-lots of tricks up your sleeve for debugging this, you don't need help.
+and warrants its own name: **The YX Problem**. Imagine you are developing your
+GRUNDUS app and hitting `EPERM`s. You're used to this, GRUNDUS is like that
+sometimes. You have lots of tricks up your sleeve for debugging this, you don't
+need help.
 
 But, suddenly it pops into your head that maybe SELinux is causing a problem.
 Obviously you wouldn't disable SELinux on a production device, but it's a useful
@@ -76,4 +77,11 @@ would have gone better:
 > looking for `sudo setenforce 0`.
 
 Anyway, I'm not saying the XY problem isn't real. But it isn't the only problem
-out there. Communication is hard, there aren't many shortcuts. So be patient!
+out there. Communication is hard, there aren't many shortcuts. If you make
+assumptions and jump to conclusions people will get frustrated, this goes both
+ways in every interaction.
+
+So, just be patient! Give people the time to explain themselves, ask for
+clarity. Don't just link https://xyproblem.info with no context. Don't just link
+a Stack Overflow question that you think is related to "what they're really
+asking". Just... be nice, yeah?
