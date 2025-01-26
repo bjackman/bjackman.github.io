@@ -40,7 +40,7 @@ sometimes. You have lots of tricks up your sleeve for debugging this, you don't
 need help.
 
 But, suddenly it pops into your head that maybe SELinux is causing a problem.
-Obviously you wouldn't disable SELinux on a production device. It doesn't really
+Obviously you wouldn't disable SELinux on a production device. It doesn't even
 seem likely that SELInux is at fault here. But it's a useful debugging step to
 have in your toolbox, why don't you try something new? So here you go:
 
