@@ -6,6 +6,8 @@ Then: `hugo serve`. This should auto-reload and shit.
 
 To create a new post: `hugo new content content/posts/name.md`.
 
+Page views are tracked at https://yawn.goatcounter.com/.
+
 ## Notes on port from Jekyll
 
 TODOs after `hugo import`ing from old Jekyll version:
