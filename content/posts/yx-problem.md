@@ -23,8 +23,8 @@ The classic example goes something like this:
 
 OK, there were two possible outcomes of this conversation:
 
-- Schlörbert haplessly ships an insecure GRUNDUS device and his District
-  Supervisor's Lunar Orbit Access Credentials are stolen as a result.
+- Schlörbert haplessly ships an insecure GRUNDUS device and his Quadrant
+  Commander's Lunar Orbit Access Credentials are stolen as a result.
 
 - Æthelred and Schlörbert waste a few minutes getting to the point of their
   conversation.
