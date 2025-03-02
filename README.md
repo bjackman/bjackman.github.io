@@ -8,6 +8,20 @@ To create a new post: `hugo new content content/posts/name.md`.
 
 Page views are tracked at https://yawn.goatcounter.com/.
 
+## Writing blong ponts
+
+Refer to other posts like this: `[here]({{< ref yx-problem-v2 >}})`.
+
+Make "callout" sections like this:
+
+```markdown
+**Note**:
+There's now a punchier, less silly and obtuse version of this argument [here]({{< ref yx-problem-v2 >}}).
+{.callout}
+```
+
+They just get a background color and some padding.
+
 ## Notes on port from Jekyll
 
 TODOs after `hugo import`ing from old Jekyll version:

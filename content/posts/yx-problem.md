@@ -1,7 +1,11 @@
 ---
 date: '2025-01-25T15:37:25+01:00'
-title: 'The YX Problem'
+title: 'Meandering nonsense about the YX Problem'
 ---
+
+**Note**:
+There's now a punchier, less silly and obtuse version of this argument [here]({{< ref yx-problem-v2 >}}).
+{.callout}
 
 [The XY Problem](https://xyproblem.info/) is a name for the phenomenon that
 people asking for help often "skip ahead" to questions about the solution they

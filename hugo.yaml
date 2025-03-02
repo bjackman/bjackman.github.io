@@ -10,6 +10,10 @@ markup:
       # Enable embedding random HTML garbage in Markdown. This is OK because
       # it's all my own garbage.
       unsafe: true
+    parser:
+      attribute:
+        block: true
+        title: true
 params:
   theme_config:
     isShowFooter: false
