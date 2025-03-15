@@ -1,6 +1,6 @@
 ---
 date: '2025-03-02T13:28:10+01:00'
-title: 'The YX Problem'
+title: 'The YX Problem (Reverse XY Problem)'
 ---
 
 [XY Problem](https://xyproblem.info/) interactions go something like this:
