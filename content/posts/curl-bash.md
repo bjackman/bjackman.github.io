@@ -48,7 +48,7 @@ Despite all this, there's clearly a YOLO spectrum:
 2. `curl | bash`
 3. `cargo install` / `brew install` / `npm install`
 4. `sudo apt install` / `nix-shell -p` / `podman run` / `snap install` /
-   `flatpak install`. (arguing about the relative YOLO levels of these options
+   `flatpak install` (arguing about the relative YOLO levels of these options
    is left as an exercise to the reader).
 
 I just said I think my OS of choice is an insecure dumpster fire. Sure, towards the
