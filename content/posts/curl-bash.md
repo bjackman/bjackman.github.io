@@ -17,8 +17,8 @@ in your browser profile.
 But what if there _was_ a real user/root boundary? My employer has a corporate
 desktop Linux distro which seems to have some meaningful keyring setup in place
 for browser creds. And we shouldn't have any sensitive corporate data stored on
-the device. The user/root boundary might _meaningful_ on those systems, but that
-doesn't mean it's _protective_.
+the device. The user/root boundary might be _meaningful_ on those systems, but
+that doesn't mean it's _protective_.
 
 The Linux kernel is a monolith in C. As of today there are 3074 [un-rejected
 kernel CVEs dated from
@@ -26,17 +26,17 @@ kernel CVEs dated from
 Most of those won't be exploitable on your system, many of them aren't
 exploitable at all (the bar for creating a kernel CVE is pretty low). Still,
 even a pretty small fraction of three thousand per year is several
-vulnerabilities per day. And  that's only the ones that got fixed. There are
+vulnerabilities per day. And that's only the ones that got fixed. There are
 [hundreds of unfixed bugs](https://syzkaller.appspot.com/upstream) that are
 publicly-listed, many of which are likely exploitable, many of which are several
 years old.
 
 Even if you reboot daily, if you're running Linux you probably have dozens of
-N-days on your system. I haven't even mentioned into zero-days. Why bother with
+N-days on your system. I haven't even mentioned zero-days. Why bother with
 those?
 
 I don't know much about other OSs, I'm sure they are just as buggy, but I hear
-XNU (MacOS) has some nice hardening in place though. It is also possible to
+XNU (macOS) has some nice hardening in place though. It is also possible to
 build pretty hardened Linux systems, and distros are incrementally moving in
 that direction.
 
@@ -48,7 +48,7 @@ Despite all this, there's clearly a YOLO spectrum:
 2. `curl | bash`
 3. `cargo install` / `brew install` / `npm install`
 4. `sudo apt install` / `nix-shell -p` / `podman run` / `snap install` /
-   `flatpak install`. (arguing aboutv the relative YOLO levels of these options
+   `flatpak install`. (arguing about the relative YOLO levels of these options
    is left as an exercise to the reader).
 
 I just said I think my OS of choice is an insecure dumpster fire. Sure, towards the
@@ -86,7 +86,7 @@ actually... I just get enough value out of Rustup that I tolerate it.
 what effect it will have on my system. Sure, it's unclear what effect _running
 any code at all_ will have on my system, if I don't read it or sandbox it. But
 the only threat I'm really defending against here is incompetence, not malice.
-An incompoetent developer can make a lot of poor decisions in a Bash script.
+An incompetent developer can make a lot of poor decisions in a Bash script.
 They can make poor decisions in a `Cargo.toml` too, but they are funneled
 towards good ones. And if they were able to get their package into the Debian
 repositories, they might not be all that incompetent.
