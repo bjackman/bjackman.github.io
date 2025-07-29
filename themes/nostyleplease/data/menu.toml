@@ -1,0 +1,11 @@
+[[entries]]
+title = "Look upon my Posts, ye Mighty:"
+  [entries.post_list]
+  limit = 20
+  show_more = true
+  show_more_text = "See archive..."
+  show_more_url = "posts"
+
+[[entries]]
+title = "rss"
+url = "index.xml"
