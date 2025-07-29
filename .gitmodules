@@ -1,6 +1,3 @@
-[submodule "themes/themes/no-style-please"]
-	path = themes/themes/nostyleplease
-	url = git@github.com:hanwenguo/hugo-theme-nostyleplease.git
 [submodule "themes/nostyleplease"]
 	path = themes/nostyleplease
 	url = git@github.com:bjackman/hugo-theme-nostyleplease.git
