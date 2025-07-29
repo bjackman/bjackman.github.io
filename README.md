@@ -1,12 +1,8 @@
 # My blong
 
-For Ubuntu: `sudo snap install hugo`
+Start with `nix develop`.
 
-Then: `hugo serve`. This should auto-reload and shit. If you see something like:
-
-```
-WARN  found no layout file for "html" for kind "term": You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
-```
+Then: `hugo serve`. This should auto-reload and shit.
 
 It means you forgot to clone recursively. Run `git submodule init && git submodule update`.
 
