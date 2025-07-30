@@ -28,7 +28,8 @@
           hugo build \
             --cacheDir $(mktemp -d) \
             --destination $out \
-            --source "$writableSrc"
+            --source "$writableSrc" \
+            --minify --baseURL https://yawn.io/
         '';
         default = site;
       };
