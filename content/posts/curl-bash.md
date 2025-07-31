@@ -1,5 +1,5 @@
 ---
-date: '2025-07-31T12:11:23+02:00'
+date: '2025-07-30T12:11:23+02:00'
 title: "curl | bash isn't a security issue (on Linux)"
 draft: true
 ---
@@ -37,44 +37,69 @@ vulnerabilities per day. And that's only the ones that got fixed. There are
 publicly-listed, many of which are likely exploitable, many of which are several
 years old.
 
-Even if you reboot daily, if you're running Linux you probably have dozens of
-N-days on your system. I haven't even mentioned zero-days. Why bother with
-those?
+Even if you reboot daily, you probably have dozens of exploitable N-days on your
+system. I haven't even mentioned zero-days. Why bother with those?
 
-**Note**:
-I don't know much about other OSs, I'm sure they are just as buggy, but I hear
-XNU (macOS) has some nice hardening in place though. It is also possible to
-build pretty hardened Linux systems, and distros are incrementally moving in
-that direction.
-{{.callout}}
+All of this leads to the conclusion: if you think an actor might be malicious,
+**downloading their code and running it unsandboxed is exactly as risky as
+running it as root**.
+
+### How we get away with it
+
+If Linux is so broken, why does the world keep turning? The answer is that our
+most important systems are architected with the brokenness in mind. Luckily for
+us, while vulns [do](https://dirtypipe.cm4all.com/) sometimes [show
+up](https://en.wikipedia.org/wiki/Dirty_COW) in really core areas of the kernel,
+the vast majority are in prety obscure dark corners of the API where very few
+applications ought to stray.
+
+This makes sandboxing really effective. The most obvious (and probably also the
+most secure) sandboxes are web browsers and KVM. But just running a normal
+process, without access to the full syscall API already goes a long way[^process-sandboxing].
+
+### What about hardening?
+
+The Linux kernel itself [is very slowly gaining a
+bunch of features](https://docs.kernel.org/security/self-protection.html) that
+start to add up to something like a dial that says "security". One day, it
+might possible to turn that dial up to 11 (probably when you compile the
+kernel) and get a system where:
+
+- exploiting kernel bugs is really hard, even from outside a sandbox, _and_
+
+- the system is still usable (cost-effective on the server, responsive enough
+for the desktop).
+
+But we aren't there today. As things stand, you need to do work across the stack in order to build a secure system on Linux. This is part of the reason that Android and ChromeOS are so different from GNU/Linux. 
+
+I don't know very much about MacOS, but IIUC, XNU (its kernel) already has a
+lot of these hardening features. Yet at the same time, Apple still opts to do
+much of the same cross-stack engineering. This feels like a sign that kernel
+hardening will always be an "and" instead of an "or".
 
 ## It's not about malicious developers
 
-Despite all this, there's clearly a YOLO spectrum:
+So, Linux is so broken that `curl | sudo bash` isn't a security issue, but I
+still don't do it. Why not? 
+
+First, let's take look at the YOLO spectrum of software installation:
 
 1. `curl | sudo bash`
 2. `curl | bash`
-3. `cargo install` / `brew install` / `npm install`
-4. `sudo apt install` / `nix-shell -p` / `podman run` / `snap install` /
+3. `cargo install` / `brew install` / `npm install` / `nix run`
+4. `sudo apt install` / `podman run` / `snap install` /
    `flatpak install` (arguing about the relative YOLO levels of these options
    is left as an exercise to the reader).
 
-I just said I think my OS of choice is an insecure dumpster fire. Sure, towards the
-bottom of the YOLO spectrum, we start to get some meaningful sandboxing
-features, but why am I more comfortable with `cargo install` than `curl | bash`?
-
-It's because **if I choose to run native code on my computer, I've priced in the
-risk that the developer is malicious**[^compromised]. I don't get protection
-from my OS or any other tooling; if my desktop remains uncompromised it's
-because the people whose code I'm running aren't trying to compromise my
-desktop. If I want to run code that I don't "trust", I would always run it in a
-VM[^browser-vm].
+In terms of a potentially malicious developer, I don't see
+much[^spectrum-sandboxing] risk difference between the levels of this spectrum,
+I still see a spectrum there.
 
 ## It's about _respect_
 
-I don't reject `curl | bash` because I'm worried about security[^worry], I
-reject it because _I like my system and I don't want someone to fuck it up_. If
-a developer presents their tool with a `curl | bash`, I suspect that either:
+I don't reject `curl | bash` because I'm worried about security, I reject it
+because _I like my system and I don't want someone to fuck it up_. If a
+developer presents their tool with a `curl | bash`, I suspect that either:
 
 1. Pushing it towards the bottom of the YOLO spectrum was _too hard_, because
    it's _too invasive_. Hmm, no thanks.
@@ -85,18 +110,22 @@ a developer presents their tool with a `curl | bash`, I suspect that either:
 That means there are exceptions. Nix is a `curl | bash` installation, but it
 seems to be a pretty carefully-developed one, with clear instructions for
 undoing it. I think the Nix developers probably care about this kinda thing, or
-they wouldn't be Nix developers! Rustup is also on this list, since, well...
-actually... I just get enough value out of Rustup that I tolerate it.
+they wouldn't be Nix developers! 
 
 ## Conclusion
 
-`curl | bash` isn't a security problem. I don't like it because it's unclear
-what effect it will have on my system. Sure, it's unclear what effect _running
-any code at all_ will have on my system, if I don't read it or sandbox it. But
-the only threat I'm really defending against here is incompetence, not malice.
-An incompetent developer can make a lot of poor decisions in a Bash script.
-They can make poor decisions in a `Cargo.toml` too, but they are funneled
-towards good ones. And if they were able to get their package into the Debian
+Maybe you thought this post would be about how secure Linux is. It's actually
+the opposite. `curl | bash` isn't a security problem on Linux, just like
+microplastics aren't a health concern for heroin addicts.
+
+I don't like `curl | bash` because it's unclear what effect it will have on my
+system. Sure, it's unclear what effect _running any code at all_ will have on my
+system, if I don't read it or sandbox it. But **the threat I'm defending against
+here is incompetence, not malice**. 
+
+An incompetent developer can make a lot of poor decisions in a Bash script. They
+can make poor decisions in a `Cargo.toml` too, but they are funneled towards
+good ones. And if they were able to get their package into the Debian
 repositories, they might not be all that incompetent.
 
 So, avoid `curl | bash`, but take a moment to consider why!
@@ -105,16 +134,14 @@ So, avoid `curl | bash`, but take a moment to consider why!
 works. In fact, I do this for basically everything if the "Getting Started"
 points me to anything other than the package managers I already use.
 
-[^compromised]: Or compromised. But, I think e.g. stealing a "real" developer's
-SSH keys and directly injecting exploits into a release is probably less
-effective than just making malicious contributions [à la XZ
-Utils](https://en.wikipedia.org/wiki/XZ_Utils_backdoor).
+[^process-sandboxing]: There are a few different ways to achieve this. They
+include LSMs (in particular
+[Landlock](https://docs.kernel.org/security/landlock.html) which is specifically
+designed for this),
+[seccomp](https://www.kernel.org/doc/html/v5.0/userspace-api/seccomp_filter.html),
+and even ptrace. [gVisor](https://gvisor.dev/) is quite an interesting case that
+uses KVM in an interesting way.
 
-[^browser-vm]: Luckily the browser counts as a VM. There are also userspace
-sandboxing tools like [Bubblewrap](https://github.com/containers/bubblewrap).
-It's possible to get real protection from something like that if it's
-set up properly, I'd be fine with doing that if I ever had a need for something
-with less overhead than a VM.
-
-[^worry]: I _am_ worried about security, though. When I wrote "if my desktop
-remains uncompromised", I really _meant_ that "if".
+[^spectrum-sandboxing]: I'm being prettyx harsh here. Escaping a plain Podman
+container isn't very hard, but it _does actually require an exploit_. And
+Flatpak and Snap actually have meaningful syscall sandboxing.
