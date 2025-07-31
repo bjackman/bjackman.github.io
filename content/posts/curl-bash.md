@@ -17,7 +17,7 @@ think so, because there's no significant security boundary between users on
 Linux. There are two reasons for this:
 
 1. [Almost everything of real-world interest on a desktop GNU/Linux system is
-trivially accessible to the primary unprivileged user](https://xkcd.com/1200/).
+trivially accessible to the primary unprivileged user](https://xkcd.com/1200/)[^keyring].
 In other words, the user boundary is not very _meaningful_.
 
 2. Attackers who can run arbitrary code can quite easily access other users'
@@ -31,7 +31,7 @@ kernel CVEs dated from
 2024](https://git.kernel.org/pub/scm/linux/security/vulns.git/tree/cve/published/2024).
 Most of those won't be exploitable on your system, many of them aren't
 exploitable at all (the bar for creating a kernel CVE is pretty low). Still,
-even a pretty small fraction of three thousand per year is several
+even a small fraction of three thousand per year is several
 vulnerabilities per day. And that's only the ones that got fixed. There are
 [hundreds of unfixed bugs](https://syzkaller.appspot.com/upstream) that are
 publicly-listed, many of which are likely exploitable, many of which are several
@@ -55,8 +55,12 @@ applications ought to stray.
 
 This makes sandboxing really effective. The most obvious (and probably also the
 most secure) sandboxes are web browsers and KVM. But just running a normal
-process without full syscall API access already goes a long
+process/container without full syscall API access already goes a long
 way[^process-sandboxing].
+
+You can't have a kernel with no vulnerabilities. You can't even have a Linux
+kernel with no _known_ vulnerabilities. But you _can_ have a kernel without any
+known way for VM guests to escape into the hosts[^hypervisor].
 
 ### What about hardening?
 
@@ -73,10 +77,10 @@ for the desktop).
 
 But we aren't there today. As things stand, you need to do work across the stack in order to build a secure system on Linux. This is part of the reason that Android and ChromeOS are so different from GNU/Linux. 
 
-I don't know very much about MacOS, but IIUC, XNU (its kernel) already has a
-lot of these hardening features. Yet at the same time, Apple still opts to do
-much of the same cross-stack engineering. This feels like a sign that kernel
-hardening will always be an "and" instead of an "or".
+I don't know very much about MacOS, but from what I've heard XNU (its kernel)
+already has a lot of these hardening features. Yet at the same time, Apple still
+opts to do much of the same cross-stack engineering. This feels like a sign that
+kernel hardening will always be an "and" instead of an "or".
 
 ## It's not about malicious developers
 
@@ -131,6 +135,13 @@ repositories, they might not be all that incompetent.
 
 So, avoid `curl | bash`, but take a moment to consider why!
 
+[^keyring]: On some systems, really important data is stored in a keyring that
+can only be decrypted via action from the human user. For example Chrome can
+store credentials this way. I don't know enough about browsers or these
+credentials to know how protective this is in practice. Firefox doesn't do this,
+anyway. I assume Windows and MacOS do much better than Linux here, but I don't
+know about that either.
+
 [^nix]: Well, actually I usually try `nix run nixpkgs#thingy` and it usually
 works. In fact, I do this for basically everything if the "Getting Started"
 points me to anything other than the package managers I already use.
@@ -142,6 +153,10 @@ designed for this),
 [seccomp](https://www.kernel.org/doc/html/v5.0/userspace-api/seccomp_filter.html),
 and even ptrace. [gVisor](https://gvisor.dev/) is quite an interesting case that
 uses KVM in an interesting way.
+
+[^hypervisor]: Actually, for KVM to be a solid sandbox, not only KVM itself (the
+kernel component) but also the VMM (the userspace component, e.g. QEMU) needs to
+be solid too.
 
 [^spectrum-sandboxing]: I'm being pretty harsh here. Escaping a plain Podman
 container isn't very hard, but it _does actually require an exploit_. And
