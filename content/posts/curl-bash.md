@@ -1,27 +1,32 @@
 ---
-date: '2025-05-18T12:11:23+02:00'
-title: "curl | bash isn't a security issue"
+date: '2025-07-31T12:11:23+02:00'
+title: "curl | bash isn't a security issue (on Linux)"
 draft: true
 ---
 
 When I want to try out a new tool and its "Getting Started" page kicks off with
 `curl https//thingy.dev/install.sh | sudo bash`, I usually [turn 360° and walk
-away](/assets/xbox_360.gif). It's not worth it.
+away](/assets/xbox_360.gif)[^nix]. It's not worth it.
 
-What if we drop the `sudo`? That's much safer, right? Not really. There is not a
-very interesting security boundary between root and unprivileged users on a
-typical Linux system. The most sensitive data on your system is probably
-in your browser profile.
+But this is _not_ because I'm worried about security. In fact I don't think
+there's any real security issue with the `curl | sudo bash` here.
 
-## Linux is broken (in which I momentarily forget other OSs exist)
+To understand why, let's start by considering what happens if we drop this sudo.
+Is `curl | sudo bash` more of a security risk than plan `curl | bash`? I don't
+think so, because I there's no significant security boundary between users on
+Linux. There are two reasons for this:
 
-But what if there _was_ a real user/root boundary? My employer has a corporate
-desktop Linux distro which seems to have some meaningful keyring setup in place
-for browser creds. And we shouldn't have any sensitive corporate data stored on
-the device. The user/root boundary might be _meaningful_ on those systems, but
-that doesn't mean it's _protective_.
+1. [Almost everything of real-world interest on a desktop GNU/Linux system is
+trivially accessible to the primary unprivileged user](https://xkcd.com/1200/).
+In other words, the user boundary is not very _meaningful_.
 
-The Linux kernel is a monolith in C. As of today there are 3074 [un-rejected
+2. Attackers who can run arbitrary code can quite easily access other users'
+data (by becoming `root`), because Linux is broken. In other words, the user
+boundary is not very _protective_.
+
+## Linux is broken 
+
+The Linux kernel is a monolith in C. As of today there are 3065 [un-rejected
 kernel CVEs dated from
 2024](https://git.kernel.org/pub/scm/linux/security/vulns.git/tree/cve/published/2024).
 Most of those won't be exploitable on your system, many of them aren't
@@ -36,10 +41,12 @@ Even if you reboot daily, if you're running Linux you probably have dozens of
 N-days on your system. I haven't even mentioned zero-days. Why bother with
 those?
 
+**Note**:
 I don't know much about other OSs, I'm sure they are just as buggy, but I hear
 XNU (macOS) has some nice hardening in place though. It is also possible to
 build pretty hardened Linux systems, and distros are incrementally moving in
 that direction.
+{{.callout}}
 
 ## It's not about malicious developers
 
@@ -93,6 +100,10 @@ towards good ones. And if they were able to get their package into the Debian
 repositories, they might not be all that incompetent.
 
 So, avoid `curl | bash`, but take a moment to consider why!
+
+[^nix]: Well, actually I usually try `nix run nixpkgs#thingy` and it usually
+works. In fact, I do this for basically everything if the "Getting Started"
+points me to anything other than the package managers I already use.
 
 [^compromised]: Or compromised. But, I think e.g. stealing a "real" developer's
 SSH keys and directly injecting exploits into a release is probably less
