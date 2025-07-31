@@ -44,9 +44,9 @@ tolerate that, so I can easily tolerate this".
 What am I saying here? Are things harder than you think, or easier? Yes,
 whatever's more helpful. You can manipulate your perspective to break things
 down. Dreading the topsoil? Well, zoom out, it's just one step of a whole house,
-and didn't you say you were really excited about building that house? Daunted by
-the house project? Zoom in, it's just a long series of topsoil-scale problems
-that you know you can solve.
+and didn't you say you were really excited about building that house? The
+topsoil is nothing by comparison. Daunted by the house project? Zoom in, it's
+just a long series of topsoil-scale problems that you know you can solve.
 
 [^1]: The US Foreign Service Institute
 [estimates](https://www.state.gov/foreign-service-institute/foreign-language-training)
