@@ -24,6 +24,14 @@ There's now a punchier, less silly and obtuse version of this argument [here]({{
 
 They just get a background color and some padding.
 
+Create footnotes like this:
+
+```markdown
+Something important[^foo].
+
+[^foo]: Some idiotic addition.
+```
+
 ## Notes on port from Jekyll
 
 TODOs after `hugo import`ing from old Jekyll version:
