@@ -1,6 +1,7 @@
 ---
 date: '2025-05-18T12:11:23+02:00'
 title: "curl | bash isn't a security issue"
+draft: true
 ---
 
 When I want to try out a new tool and its "Getting Started" page kicks off with
