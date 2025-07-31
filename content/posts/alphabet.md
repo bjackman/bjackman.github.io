@@ -52,7 +52,7 @@ just a long series of topsoil-scale problems that you know you can solve.
 1,012 hours of _class time_ is needed to reach "professional working
 proficiency".
 
-[^2] I'm glossing over the fact that different people learn best in different
+[^2]: I'm glossing over the fact that different people learn best in different
 ways. For some people, language lessons might not help very much. But those
 people are in a minority. And if you really want to learn a language, it's
 probably worth spending a few grand _just to find out if you're one of those
