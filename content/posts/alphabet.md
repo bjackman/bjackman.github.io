@@ -1,7 +1,6 @@
 ---
 date: '2025-07-29T12:40:54+02:00'
 title: 'Learning an alphabet is easy'
-draft: true
 ---
 
 I studied Russian at school. People often say, "Wow, Russian, that must be so
