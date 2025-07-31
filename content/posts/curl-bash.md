@@ -5,15 +5,15 @@ draft: true
 ---
 
 When I want to try out a new tool and its "Getting Started" page kicks off with
-`curl https//thingy.dev/install.sh | sudo bash`, I usually [turn 360° and walk
+`curl https://thingy.dev/install.sh | sudo bash`, I usually [turn 360° and walk
 away](/assets/xbox_360.gif)[^nix]. It's not worth it.
 
 But this is _not_ because I'm worried about security. In fact I don't think
 there's any real security issue with the `curl | sudo bash` here.
 
 To understand why, let's start by considering what happens if we drop this sudo.
-Is `curl | sudo bash` more of a security risk than plan `curl | bash`? I don't
-think so, because I there's no significant security boundary between users on
+Is `curl | sudo bash` more of a security risk than plain `curl | bash`? I don't
+think so, because there's no significant security boundary between users on
 Linux. There are two reasons for this:
 
 1. [Almost everything of real-world interest on a desktop GNU/Linux system is
@@ -50,19 +50,20 @@ If Linux is so broken, why does the world keep turning? The answer is that our
 most important systems are architected with the brokenness in mind. Luckily for
 us, while vulns [do](https://dirtypipe.cm4all.com/) sometimes [show
 up](https://en.wikipedia.org/wiki/Dirty_COW) in really core areas of the kernel,
-the vast majority are in prety obscure dark corners of the API where very few
+the vast majority are in pretty obscure dark corners of the API where very few
 applications ought to stray.
 
 This makes sandboxing really effective. The most obvious (and probably also the
 most secure) sandboxes are web browsers and KVM. But just running a normal
-process, without access to the full syscall API already goes a long way[^process-sandboxing].
+process without full syscall API access already goes a long
+way[^process-sandboxing].
 
 ### What about hardening?
 
 The Linux kernel itself [is very slowly gaining a
 bunch of features](https://docs.kernel.org/security/self-protection.html) that
 start to add up to something like a dial that says "security". One day, it
-might possible to turn that dial up to 11 (probably when you compile the
+might be possible to turn that dial up to 11 (probably when you compile the
 kernel) and get a system where:
 
 - exploiting kernel bugs is really hard, even from outside a sandbox, _and_
@@ -93,7 +94,7 @@ First, let's take look at the YOLO spectrum of software installation:
 
 In terms of a potentially malicious developer, I don't see
 much[^spectrum-sandboxing] risk difference between the levels of this spectrum,
-I still see a spectrum there.
+I still see a spectrum there for other reasons.
 
 ## It's about _respect_
 
@@ -142,6 +143,6 @@ designed for this),
 and even ptrace. [gVisor](https://gvisor.dev/) is quite an interesting case that
 uses KVM in an interesting way.
 
-[^spectrum-sandboxing]: I'm being prettyx harsh here. Escaping a plain Podman
+[^spectrum-sandboxing]: I'm being pretty harsh here. Escaping a plain Podman
 container isn't very hard, but it _does actually require an exploit_. And
 Flatpak and Snap actually have meaningful syscall sandboxing.
