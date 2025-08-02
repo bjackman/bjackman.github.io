@@ -113,7 +113,7 @@ developer presents their tool with a `curl | bash`, I suspect that either:
    it's _too invasive_. Hmm, no thanks.
 2. Or it was _too boring_, because they aren't _interested_ in how their tool
    interacts with the host system. Sounds like a developer who's gonna fuck up
-   my host system!
+   my host system![^bash-installer]
 
 That means there are exceptions. Nix is a `curl | bash` installation, but it
 seems to be a pretty carefully-developed one, with clear instructions for
@@ -160,3 +160,11 @@ uses KVM in an interesting way.
 [^spectrum-sandboxing]: I'm being pretty harsh here. Escaping a plain Podman
 container isn't very hard, but it _does actually require an exploit_. And
 Flatpak and Snap actually have meaningful syscall sandboxing.
+
+[^bash-installer]: I've also once or twice read the script that I was asked to
+pipe into my shell, and discovered that in fact the developers _have_ packaged
+their tool properly for a bunch of different distros. Then their script just
+detects which distro you're on, adds the appropriate repo to your system, and
+then calls the appropriate package manager. I guess those developers just
+_really_ want their "Getting Started" to be short and snappy, and assume most of
+their prospective users don't care about all this OS-nerd bullshit.
