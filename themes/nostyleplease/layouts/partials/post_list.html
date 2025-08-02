@@ -14,6 +14,9 @@
     {{- end -}}
 {{- end -}}
 
+{{/* Exclude posts with 'preview' (custom param) set */}}
+{{- $posts := where $posts "Params.preview" "!=" true -}}
+
 {{- $limit_exceeded:= "" -}}
 {{- if (and .limit (gt (len $posts) .limit)) -}}
     {{- $limit_exceeded = true -}}

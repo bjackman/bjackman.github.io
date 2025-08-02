@@ -32,6 +32,29 @@ Something important[^foo].
 [^foo]: Some idiotic addition.
 ```
 
+## Drafts and previews
+
+Hugo has a native feature where you can set `draft: true` on a post and it
+doesn't get built into the result (unless you set `--buildDrafts`). But this is
+a global on/off, there's no way to "quietly" publish them.
+
+So I implemented a [custom
+parameter](https://gohugo.io/content-management/front-matter/#parameters) called
+`preview` that causes pages where this is set to be excluded from the RSS feed
+and from the page list.
+
+This is totally orthogonal to the draft setting. Set it like this in the YAML front matter:
+
+```yaml
+params:
+  preview: true
+```
+
+This is inspired by the "discreet drafts" thing describde
+[here](https://zwbetz.com/discreet-drafts-in-hugo/#rss-feed-template) but I
+think having it act as an orthogonal parameter is better rather than confusingly
+changing the behaviour of the builtin flag.
+
 ## Notes on port from Jekyll
 
 TODOs after `hugo import`ing from old Jekyll version:

@@ -6,6 +6,8 @@
 {{- else -}}
 {{- $pages = $pctx.Pages -}}
 {{- end -}}
+{{/* Exclude posts with 'preview' (custom param) set */}}
+{{- $pages = where $pages "Params.preview" "!=" true -}}
 {{- $limit := .Site.Config.Services.RSS.Limit -}}
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
