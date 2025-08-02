@@ -6,8 +6,8 @@ params:
 ---
 
 When I want to try out a new tool and its "Getting Started" page kicks off with
-`curl https://thingy.dev/install.sh | sudo bash`, I usually [turn 360° and walk
-away](/assets/xbox_360.gif)[^nix]. It's not worth it.
+`curl https://thingy.dev/install.sh | sudo bash`, I usually [turn
+360°](/assets/xbox_360.gif) and walk away[^nix]. It's not worth it.
 
 But this is _not_ because I'm worried about security. In fact I don't think
 there's any real security issue with the `curl | sudo bash` here.
@@ -17,13 +17,13 @@ Is `curl | sudo bash` more of a security risk than plain `curl | bash`? I don't
 think so, because there's no significant security boundary between users on
 Linux. There are two reasons for this:
 
-1. [Almost everything of real-world interest on a desktop GNU/Linux system is
-trivially accessible to the primary unprivileged user](https://xkcd.com/1200/)[^keyring].
-In other words, the user boundary is not very _meaningful_.
+1. Almost everything of real-world interest on a typical desktop GNU/Linux system is
+[trivially accessible](https://xkcd.com/1200/) to the primary unprivileged
+user[^keyring].
 
 2. Attackers who can run arbitrary code can quite easily access other users'
-data (by becoming `root`), because Linux is broken. In other words, the user
-boundary is not very _protective_.
+data, or gain a persistent foothold, or whatever else, by becoming `root`,
+because Linux is broken. 
 
 ## Linux is broken 
 
@@ -59,9 +59,11 @@ most secure) sandboxes are web browsers and KVM. But just running a normal
 process/container without full syscall API access already goes a long
 way[^process-sandboxing].
 
-You can't have a kernel with no vulnerabilities. You can't even have a Linux
-kernel with no _known_ vulnerabilities. But you _can_ have a kernel without any
-known way for VM guests to escape into the hosts[^hypervisor].
+But you don't get a sandbox when you `curl | bash`. You don't get a sandbox when
+you `apt install`, or `go run` or `brew install` or anything else. (Flatpak and
+Snap do offer some sandboxing, but those are only available for limited
+use-cases).  Thus, these are all roughly equivalent from a
+malicious-developer-risk point of view.
 
 ### What about hardening?
 
@@ -71,7 +73,7 @@ start to add up to something like a dial that says "security". One day, it
 might be possible to turn that dial up to 11 (probably when you compile the
 kernel) and get a system where:
 
-- exploiting kernel bugs is really hard, even from outside a sandbox, _and_
+- exploiting kernel bugs is really hard, even without a sandbox, _and_
 
 - the system is still usable (cost-effective on the server, responsive enough
 for the desktop).
@@ -154,10 +156,6 @@ designed for this),
 [seccomp](https://www.kernel.org/doc/html/v5.0/userspace-api/seccomp_filter.html),
 and even ptrace. [gVisor](https://gvisor.dev/) is quite an interesting case that
 uses KVM in an interesting way.
-
-[^hypervisor]: Actually, for KVM to be a solid sandbox, not only KVM itself (the
-kernel component) but also the VMM (the userspace component, e.g. QEMU) needs to
-be solid too.
 
 [^spectrum-sandboxing]: I'm being pretty harsh here. Escaping a plain Podman
 container isn't very hard, but it _does actually require an exploit_. And
