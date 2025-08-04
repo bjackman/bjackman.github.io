@@ -35,7 +35,7 @@ exploitable at all (the bar for creating a kernel CVE is pretty low). Still,
 even a small fraction of three thousand per year is several
 vulnerabilities per day. And that's only the ones that got fixed. There are
 [hundreds of unfixed bugs](https://syzkaller.appspot.com/upstream) that are
-publicly-listed, many of which are likely exploitable, many of which are several
+publicly listed, many of which are likely exploitable, many of which are several
 years old.
 
 Even if you reboot daily, you probably have dozens of exploitable N-days on your
@@ -62,7 +62,7 @@ way[^process-sandboxing].
 But you don't get a sandbox when you `curl | bash`. You don't get a sandbox when
 you `apt install`, or `go run` or `brew install` or anything else. (Flatpak and
 Snap do offer some sandboxing, but those are only available for limited
-use-cases).  Thus, these are all roughly equivalent from a
+use cases). Thus, these are all roughly equivalent from a
 malicious-developer-risk point of view.
 
 ### What about hardening?
@@ -80,7 +80,7 @@ for the desktop).
 
 But we aren't there today. As things stand, you need to do work across the stack in order to build a secure system on Linux. This is part of the reason that Android and ChromeOS are so different from GNU/Linux. 
 
-I don't know very much about MacOS, but from what I've heard XNU (its kernel)
+I don't know very much about macOS, but from what I've heard XNU (its kernel)
 already has a lot of these hardening features. Yet at the same time, Apple still
 opts to do much of the same cross-stack engineering. This feels like a sign that
 kernel hardening will always be an "and" instead of an "or".
@@ -90,18 +90,18 @@ kernel hardening will always be an "and" instead of an "or".
 So, Linux is so broken that `curl | sudo bash` isn't a security issue, but I
 still don't do it. Why not? 
 
-First, let's take look at the YOLO spectrum of software installation:
+First, let's take a look at the YOLO spectrum of software installation:
 
 1. `curl | sudo bash`
 2. `curl | bash`
 3. `cargo install` / `brew install` / `npm install` / `nix run`
 4. `sudo apt install` / `podman run` / `snap install` /
-   `flatpak install` (arguing about the relative YOLO levels of these options
-   is left as an exercise to the reader).
+`flatpak install` (arguing about the relative YOLO levels of these options
+is left as an exercise to the reader).
 
 In terms of a potentially malicious developer, I don't see
-much[^spectrum-sandboxing] risk difference between the levels of this spectrum,
-I still see a spectrum there for other reasons.
+much[^spectrum-sandboxing] of a risk difference between the levels of this
+spectrum, I still see a spectrum there for other reasons.
 
 ## It's about _respect_
 
@@ -110,10 +110,10 @@ because _I like my system and I don't want someone to fuck it up_. If a
 developer presents their tool with a `curl | bash`, I suspect that either:
 
 1. Pushing it towards the bottom of the YOLO spectrum was _too hard_, because
-   it's _too invasive_. Hmm, no thanks.
+it's _too invasive_. Hmm, no thanks.
 2. Or it was _too boring_, because they aren't _interested_ in how their tool
-   interacts with the host system. Sounds like a developer who's gonna fuck up
-   my host system![^bash-installer]
+interacts with the host system. Sounds like a developer who's gonna fuck up
+my host system![^bash-installer]
 
 That means there are exceptions. Nix is a `curl | bash` installation, but it
 seems to be a pretty carefully-developed one, with clear instructions for
@@ -142,7 +142,7 @@ So, avoid `curl | bash`, but take a moment to consider why!
 can only be decrypted via action from the human user. For example Chrome can
 store credentials this way. I don't know enough about browsers or these
 credentials to know how protective this is in practice. Firefox doesn't do this,
-anyway. I assume Windows and MacOS do much better than Linux here, but I don't
+anyway. I assume Windows and macOS do much better than Linux here, but I don't
 know about that either.
 
 [^nix]: Well, actually I usually try `nix run nixpkgs#thingy` and it usually
