@@ -1,6 +1,6 @@
 ---
 date: '2025-07-30T12:11:23+02:00'
-title: "curl | bash isn't a security issue (on Linux)"
+title: "curl | sudo bash isn't a security issue (on Linux)"
 ---
 
 When I want to try out a new tool and its "Getting Started" page kicks off with
